@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+{% block body %}
+
+    <h1 class="h1">{{ 'register.h1.text'|trans }}</h1>
+
+    {{ form_start(form, {'attr': {'class':'form-without-label'}}) }}
+
+    {% if not form.vars.valid %}
+        {{ showErrors.errorAlert( [form.username, form.email]) }}
+    {% endif %}
+{#    {% if error %}
+        {{ error.messageKey|trans(error.messagedata, 'security') }}
+        {{ showErrors.errorAlert( [error]) }}
+    {% endif %}#}
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+{#            {{ form_label(form.username, "registration.form.username.label"|trans,  {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}#}
+            {{ form_widget(form.username, {'attr': {'class': 'form-input', "placeholder": "registration.form.username.label"|trans }} ) }}
+        </div>
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+{#            {{ form_label(form.email, 'registration.form.email.label'|trans, {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}#}
+            {{ form_widget(form.email, {'attr': {'class': 'form-input', "placeholder": "registration.form.email.label"|trans }} ) }}
+        </div>
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+            {{ form_row(form.password) }}
+        </div>
+
+        <button type="submit" class="form-button">{{ 'registration.form.summit.button'|trans }}</button>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,14 @@
+<div class="header-connection">
+    {% if not app.user %}
+        <a href="{{ path('register') }}" title="{{ 'header.connection.register.text'|trans }}" class="connection-link">{{ 'header.connection.register.text'|trans }}</a>
+        <a href="{{ path('login') }}" title="{{ 'header.connection.login.text'|trans }}" class="connection-link">{{ 'header.connection.login.text'|trans }}</a>
+    {% else %}
+        <a href="{{ path('logout') }}" title="{{ 'header.connection.logout.text'|trans }}" class="connection-link">{{ 'header.connection.logout.text'|trans }}</a>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('email') }}" class="connection-link-admin">email</a>
+{#        (chemin doit commencer par "admin")#}
+    {% endif %}
+
+</div>

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+{% block seo %}
+    {% include 'common/meta-header.html.twig' with {
+        'key' : 'order',
+        'title' :  'title.text' ,
+        'metaDescription' : 'meta-description.text' } only %}
+{% endblock %}
+
+
+{% block body %}
+
+    <section>
+
+
+
+        {{ form_start(form) }}
+        COMMENCER
+        <div class="form">
+            <h2 class="h2"><span class="number-form-step">1</span> {{ 'order.form.step.1.text'|trans }} </h2>
+
+            <div class="form-row">
+                {#            revoir le design#}
+                {{ form_widget(form.delivery_date, {'attr': {'class': 'form-input'  }} ) }}
+            </div>
+            {% if form.delivery_hour is defined %}
+            <div class="form-row">
+                {#            revoir le design#}
+                {{ form_widget(form.delivery_hour, {'attr': {'class': ''  }} ) }}
+            </div>
+            {% endif %}
+        </div>
+
+
+
+        {% include 'order/form/recipient.html.twig' with {
+            'formRecipient': form.recipient,
+            'country': country
+        } only %}
+
+        {% include 'order/form/sender.html.twig' with {
+            'formSender' : form.sender
+        } only %}
+
+
+
+        // si on supprime, revoir le JS
+        // on a supprimer le js donc supprimer la classe
+        <button type="submit">ICI COMMANDER</button>
+
+
+        REST
+        {{ form_rest(form) }}
+        FINI
+        {{ form_end(form) }}
+
+
+
+
+    </section>
+
+
+
+{% endblock %}
+
+
+

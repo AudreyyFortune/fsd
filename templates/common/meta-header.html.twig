@@ -1,0 +1,16 @@
+<title>
+{% if (key~'.meta-title.text')|trans(translationsOptions|default({}))|lower != 'null' %}
+    {{ (key~'.meta-title.text')|trans(translationsOptions|default({})) }}  | UniversalFlower
+{% endif %}
+</title>
+
+<meta name="description" content="
+{% if (key~'.meta-description.text')|trans(translationsOptions|default({}))|lower != key~'.meta-description.text' %}
+{{ (key~'.meta-description.text')|trans(translationsOptions|default({})) }}
+{% endif %}"/>{% if (key~'.meta-robots.text')|trans(translationsOptions|default({}))|lower != key~'.meta-robots.text' %}    
+
+<meta name="robots" content="{{ (key~'.meta-robots.text')|trans(translationsOptions|default({})) }}"/>{% endif %}
+
+<meta name="keywords" content="{% if (key~'.meta-keywords.text')|trans(translationsOptions|default({}))|lower != key~'.meta-keywords.text' %}
+{{ (key~'.meta-keywords.text')|trans(translationsOptions|default({})) }}
+{% endif %}"/>

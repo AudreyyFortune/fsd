@@ -1,0 +1,65 @@
+test: # à supprimer
+    controller: App\Controller\TestController::index
+    path:
+        en: /testen
+        fr: /testfr
+
+international:
+    controller: App\Controller\InternationalController::index
+    path:
+        en: /
+        fr: /accueil
+
+country:
+    controller: App\Controller\CountryController::index
+    path: 
+        en: /country/{slug}
+        fr: /pays/{slug}
+
+static:
+    controller: App\Controller\StaticController::index
+    path:
+        en: /info/{slug}
+        fr: /page/{slug}
+
+contact:
+    controller: App\Controller\ContactController::index
+    path:
+        en: /contact-us
+        fr: /contactez-nous
+
+email:
+    controller: App\Controller\MailerController::sendEmail
+    path:
+        en: /admin/email
+        fr: /admin/email
+
+register:
+    controller: App\Controller\AdminSecuController::register
+    path:
+        en: /registration
+        fr: /inscription
+
+login:
+  controller: App\Controller\AdminSecuController::login
+  path:
+    en: /login
+    fr: /connexion
+
+logout:
+  controller: App\Controller\AdminSecuController::logout
+  path:
+    en: /logout
+    fr: /deconnexion
+
+product:
+    controller: App\Controller\ProductController::index
+    path:
+        en: /product/{slug}
+        fr: /produit/{slug}
+
+order:
+  controller: App\Controller\OrderController::index
+  path:
+    en: /order
+    fr: /commande

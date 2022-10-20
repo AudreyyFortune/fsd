@@ -1,0 +1,197 @@
+welcome: WelcomeEn
+essai: <h2><span>TestEN</span><h2><p>fncbefncekcn</p>
+route.name.about-us: about-usTT
+
+
+# header
+header.top-bar.title.text: We deliver flowers all over the world 
+header.contact_us.link.text: Contact us
+header.logo.subtitle.text: an aquarelle.com group company
+header.lang.available.en.text: English
+header.lang.available.fr.text: Français
+header.connection.login.text: Login
+header.connection.logout.text: Logout
+header.connection.register.text: Register
+
+
+# footer
+footer.column-1.title.text: About us
+footer.column-2.title.text: Legal information
+footer.about-us.link.text: About us
+footer.about-us.route.name: about-us
+footer.cookies.link.text: Cookies
+footer.cookies.route.name: cookies
+footer.compagny.address.text: Universal Flower SAS - 28, rue Jacques Ibert - 92300 Levallois-Perret 
+
+# search-bloc
+country.delivery.search.bloc.text: Delivery country
+catalog.event.home.text: Occasions
+catalog.event.birthday.text: Birthday
+catalog.event.romantic.text: Romantic
+catalog.event.marriage.text: Marriage
+catalog.event.birth.text: Birth
+catalog.event.thanks.text: Thanks
+catalog.event.rose.text: Roses
+catalog.event.funeral.text: Funeral
+catalog.event.mothers.text: Mother's day
+search.bloc.button.text: Search
+search-bloc.country.required: Please select a country for delivery
+
+
+# reinsurance
+reinsurance.img.flower.alt.text: International flower delivery for all occasions
+reinsurance.svg.flower.alt.text: fresh flowers
+reinsurance.title.flower.text: Sending fresh flowers
+reinsurance.subtitle.flower.text: Flowers for all occasions
+reinsurance.text.flower.text: Whatever bouquet of flowers you want to offer, Universalflower offers a wide variety of compositions that will please on small and large occasions. Whatever your desires, the Universalflower florists will accompany you to celebrate every event of life all over the world thanks to its network of florists!
+reinsurance.img.truck-flower.alt.text: Flower delivery abroad by a local florist
+reinsurance.svg.truck-flower.alt.text: home delivery
+reinsurance.title.truck-flower.text: Home delivery of flowers
+reinsurance.subtitle.truck-flower.text: Bouquets of flowers delivered by an artisan florist
+reinsurance.text.truck-flower.text: By ordering on Universalflower, your order of flowers is entrusted to a florist in the country of delivery. It is he who makes your bouquet or your floral arrangement and ensures the delivery of your flowers at home or at the delivery location of your choice.
+reinsurance.img.world.alt.text: Flower delivery in over 150 countries
+reinsurance.svg.world.alt.text: worldwide shipping
+reinsurance.title.world.text: Worldwide shipping
+reinsurance.subtitle.world.text: Home delivery of flowers
+reinsurance.text.world.text: Throughout the year, florists make and deliver, all over the world, bouquets of flowers and seasonal plants, bouquets of roses, lilies, bonsai ...
+reinsurance.img.pay.alt.text: Your payment is secured
+reinsurance.svg.pay.alt.text: secure payment
+reinsurance.title.pay.text: Secure and reliable payment
+reinsurance.subtitle.pay.text: Bank card
+reinsurance.text.pay.text: Universalflower has entrusted its payment system to providers specialized in securing online payments. We never know and never keep information about your bank card.
+
+
+# international page
+international.meta-title.text: International flower delivery within 24 to 48 hours
+international.meta-description.text: With Aquarelle, specialist in international flower delivery, send flowers around the world! Celebrate all the occasions, no matter where you are, thanks to Aquarelle’s international service!
+international.meta-keywords.text: international flowers delivery, flowers delivery abroad, deliver flowers internationally, flower delivery abroad, international flower delivery, flower delivery abroad, post flowers internationally, post flowers abroad, post flowers overseas, posting flowers abroad, send international flowers, send flowers abroad, send flowers internationally, send flowers overseas, home flower delivery abroad, flower delivery, flowers, give flowers abroad, deliver flowers overseas, flower delivery, sending flowers internationally
+international.meta-robots.text: index,follow
+international.h1.text: International Flower Delivery
+international.h2.text: Choose a country for your delivery
+international.introduction.text: Send flowers throughout the world in one simple gesture. Our network of florists covers all continents, from South Africa to Turkey, passing by India, Uruguay, Mexico, Chile, the United States, Japan, France, Greece and even Bulgaria. Choose the flower bouquet which most appeals to you and we will arrange for one of our florists, based nearby to your recipient, to create and hand-deliver it within 24 to 48 hours.
+international.seo.block.1.text.html: <h3>Send flowers throughout the world</h3><p>Specialising in international flower delivery since 1997, Universal Flower allows you to send flowers throughout the world thanks to its network of florist partners. Wherever you're based, send flower bouquets throughout the world to those you care about.</p> <p>With our international flower delivery service, we are uniquely equipped to meet all your needs in delivering flowers to your loved ones, wherever they are based, throughout the world and on every occasion.</p> <p>So, when you choose a country and international address for flower delivery, we immediately forward your order to the artisan florist based nearby to your recipient, who will shortly receive the bouquet delivered to their home address.</p> <p>Don't wait a moment longer to cheer up your loved ones by sending flowers, even when they're abroad!</p>
+international.seo.block.2.text.html: <h3>Flower delivery abroad</h3><p>Send flowers abroad in only a few hours, thanks to Universal Flower's international network. We employ all our know-how to offer you a huge range of fresh flower bouquets to send to your loved ones throughout the world - roses, orchids, peonies, jasmin, lisianthus...- to give whenever it suits you.</p> <p>Don't let another opportunity slip away to wish someone a happy birthday, send your congratulations for a marriage or birth... Now you can choose to send flowers abroad and throughout the world! Send flowers throughout the whole world! In all countries, flowers make a unique, ideal gift that you can offer on all sorts of occassions &#58; marriages, baptisms, condoleance, birthdays, end of year festivities, Valentine's day...</p> <p>Send a pretty flower bouquet abroad to elegantly convey your feelings, thanks to the timeless language of flowers. And the person receiving your display of affection will be even more moved by the fact that you make this gesture from afar.</p> <p>Discover a large range of bouquets, floral compositons and plants for international delivery. Simple, easy and quick! Thanks to Universal Flower and its florist partners, simply order the flower bouquets or compositions which you want to offer. Choose the country for delivery, and your flowers will be swiftly delivered throughout the world. Don't wait a moment longer to spread the joy - quick, discover our seasonal bouquets, and we'll take care of the international express flower delivery.</p>
+international.img.alt.text: Worldwide flower delivery
+
+
+# country page
+country.h1.text: Delivery by our florists - %country%
+country.catalog.one.price.text: From € %price%
+country.catalog.more.price.text: One price € %price%
+country.h2.text: We also deliver to
+
+# product page
+product.h1.text: Flower delivery - %country%
+product.delivery.information.title.text: delivery information
+product.reference.text: Reference %ref%
+product.funeral.delivery.information.content.text.html: <p>Fresh flowers arranged and delivered by an artisan florist based nearby the delivery address or ceremony venue (crematorium, place of worship, cemetery).</p><p>Our florists deliver from Monday to Saturday, <span class="bold">at your chosen time</span>, including on bank holidays. <ul><li>For a delivery on Monday, order by noon on the previous Saturday at the latest.</li><li>For a Tuesday to Saturday delivery, order by 4pm the previous day at the latest.</li></ul></p><p class="bold">Please take into account time zone differences of the country for delivery.</p>
+product.normal.delivery.information.content.text.html: <p>Fresh flowers arranged and delivered by an artisan florist based in the recipient's local area.</p><p>Our florists deliver from Monday to Saturday, including on bank holidays. <ul><li>For a delivery on Monday, order by noon on the previous Saturday at the latest.</li><li>For a Tuesday to Saturday delivery, order by 4pm the previous day at the latest.</li></ul></p>
+product.category_1.size.text.html: standard
+product.category_2.size.text.html: premium
+product.category_3.size.text.html: deluxe
+product.size.length.text.html: This bouquet is available to delivery in %choicesLength% different size(s)
+product.form.size.label: Choose a size
+product.form.summit.button: Order
+
+# order page
+order.meta-title.text: Your order
+order.form.step.1.text: Date of delivery
+order.form.step.2.text: Recipient's contact details
+order.form.step.3.text: Your contact details
+order.summary.title.text: Order summary
+order.summary.delivery.text: Service fee
+order.summary.total.text: Total to pay
+order.cgv.accept.text: By making an order, you accept the general terms and conditions of sale.
+order.secure.payment.text: Make a secure payment
+order.protection.policy.text: <p>Universal Flower gives particular care and attention to the protection of its clients’ personal data.</p><p>Further, we commit to complying with the law n° 78-17 dated 6 January 1978 relating to freedom of information and data, as amended by the European 'GDPR' regulation 2016/679 dated 27 April 2016 relating to the protection of personal data.</p>
+# recipient form
+order.recipient.delivery.date.text: Date of delivery
+order.recipient.form.delivery.date.text: To deliver on
+order.recipient.form.funeral.delivery.date.text: Date of the funeral ceremony
+order.recipient.form.funeral.delivery.hour.text: Time of the ceremony (*)
+order.recipient.form.funeral.delivery.hour.required.text: (*) IMPORTANT your order must be made at least 24 hours before the time of the ceremony whilst accounting for time-zone differences.
+order.recipient.title.text: Recipient's contact details
+order.recipient.field.required.text: The fields marked * are mandatory.
+order.recipient.form.funeral.decreased.text: Deceased
+order.recipient.society.label: Company
+order.recipient.phone.label: Recipient's phone (preceded by the country code)
+# sender form
+order.sender.title.text: Your contact details
+order.sender.form.phone.label: Sender's phone number
+# order form
+order.form.name.placeholder: Surname *
+order.form.firstname.placeholder: Firstname *
+order.form.email.placeholder: Email *
+order.form.company.placeholder: Company
+order.form.adress.placeholder: Adress *
+order.form.zipcode.placeholder: Zip code *
+order.form.city.placeholder: City *
+order.form.country.placeholder: Country *
+order.form.additional_adress.placeholder: Additional adress
+order.form.phone.placeholder: Phone number with country code *
+order.form.details.placeholder: Futher information to enabled delivery
+order.form.funeral_ceremony.placeholder: Place of delivery for the ceremony (undertaker, funeral home, place of worship, cemetery, ...)
+
+
+# about us page
+about-us.meta-title.text: About us
+about-us.meta-description.text: About us - flower-delivery.aquarelle - Universal Flower
+about-us.meta-keywords.text: 
+about-us.meta-robots.text: index,follow
+about-us.h1.text: Who are we ?
+about-us.body.text.html: <p>Flower-delivery.aquarelle is a website of the Aquarelle Group created in 1987, the market leader for flower delivery in France.</p> <p>Our subsidiary 123fleurs is a partner of the Teleflor International network, <strong>enabling us to deliver your flower order within 24 to 48 hours globally, thanks to our network with more than 50,000 local florists spread over more than 135 countries.</strong></p>
+
+
+# cookies page
+cookies.meta-title.text: Policy relating to cookies | Universal Flower
+cookies.meta-description.text: Cookies - flower-delivery.aquarelle - Universal Flower
+cookies.meta-keywords.text: 
+cookies.meta-robots.text: index,follow
+cookies.h1.text: Cookies
+cookies.body.text.html: <section><h2>Personal data</h2> <p>In accordance with the 'Information and Freedom' law, the information requested by Universal Flower is strictly necessary for the registration of your account. It is also necessary for the commercial management and functionality of our website, making the advertising displayed on it more relevant to your interests and providing you with a good experience when you browse. This information can be shared with the companies forming part of the Aquarelle group. You can access and amend your personal data. You can also raise objections to the handling of your data.</p> <p>To exercise this last right, you only need to send us your first name, surname, address, email and a copy of your ID in order that we can respond as quickly as possible, to the following address &#58; Universal Flower 24-32 rue Jacques Ibert - 92300 LEVALLOIS-PERRET France</p></section> <section><h2>Our use of cookies</h2> <p>Our cookies policy provides further information regarding your rights in respect of data, as well as the source and use of browser data when you use our website.</p> <p>This policy is therefore important for you to ensure that you have the best experience using our Services. It is also important for us, because we want to respond to your questions fully and accurately regarding your browsing experience. We also want to take your wishes into account.</p> <p>Therefore, when you use our website, information relating to browsing on your device (computer, tablet, smartphone etc.) on our site will be registered on ‘the Cookies’ files installed on your device. In addition, we can buy advertising slots, directly or through an intermediary of our service providers (communication agency, advertising departments), in order to promote our services and offers on third party sites and applications, through advertising content (text, graphics, animations, videos etc.) distributed by our sites/applications. Be aware that cookie transmitters can modify the data which they contain.</p></section> <section><h2>Cookies used by Universal Flower</h2> <p>When you connect to our website, we may choose, subject to your preferences (see 'Your preferences concerning cookies'), to install various cookies on your device which allow us to recognise the browser on your device for the duration that the cookie remains valid.</p> <p>These Cookies allow us to &#58; <ul><li>collect statistics and record the number of visits to our site and the use of various website functions (headings and content visited, browsing history), allowing us to tailor content to suit your interests and to improve the functionality of our website ;</li><li>adapt the presentation of our site to better suit your device’s display settings (language preference, display resolution, operating system, etc..) during your visits to our website, according to the materials and visualisation or reading softwares that best suit your device;</li><li>memorise data relating to the forms which you have completed on our site (registration or access to your account), data relating to products, services or information which you have selected on our site (services, contents of order basket, etc.) ;</li><li>give you access to private and personal spaces on our site, such as your account, using the identifiers or data which you have previously disclosed ;</li> <li>put security measures in place, for example when you are asked to reconnect in order to view content or continue with your order after a certain amount of time has lapsed.</li></ul></p> <p>What is the purpose of cookies connected to our advertising content, which is distributed by third parties? When you access a website or application containing advertising slots featuring one of our adverts, this advert is likely to contain a cookie.This cookie is also likely, subject to your preferences, to be registered on your device, which enables us to recognise the browser on your device for the duration that the cookie remains valid. Cookies contained in adverts distributed by third parties are used for the purposes described below, subject to your preferences and the configuration of your navigation software when you visit our website. You can express your preferences in relation to cookies at any time. If your device allows registration of cookies and according to your preferences, the Cookies which we use allow us to do the following &#58; <ul><li>collect statistics and record the number of visits to our site and the use of various website functions (headings and content visited, browsing history), allowing us to tailor content to suit your interests and to improve the functionality of our website ;</li><li>adapt the presentation of our site to better suit your device’s display settings (language preference, display resolution, operating system, etc..) during your visits to our website, according to the materials and visualisation or reading softwares that best suit your device;</li><li>memorise data relating to forms which you have completed on our site (registration or access to your account), data relating to products, services or information which you have selected on our site (services, contents of order basket, etc.) ;</li><li>give you access to private and personal spaces on our site, such as your account, using the identifiers or data which you have previously disclosed ;</li></p></section> <section><h2>What is the point in seeing personalised adverts which are adapted according to your browsing history ?</h2> <p>Our aim is to present you with the adverts which are most relevant to your interests. To this end, cookies technology enables us to determine in real time which adverts to display on your device, according to your recent browsing history, on several sites or applications.</p> <p>Your interest in advertising content is displayed on your device when you browse a site, which often determines the advertising content that we show you, so you can make the best use of our services. This tailoring of advertising content is often provided to users for free. Undoubtedly, you prefer to see adverts which match your interests rather than adverts which do not interest you whatsoever. Similarly, advertisers want their adverts and offers to be displayed to the users who are most interested in them.</p> <p>The shared use of your device and browser settings with other people in relation to cookies is a matter of personal choice and responsibility.</p> <h3>Your preferences regarding cookies</h3><p>There are many options available for you to manage cookies. Every configuration that you may choose will affect your browsing on the Internet and the conditions of access to certain services which require the use of Cookies.</p> <p>You can configure your browsing software so that cookies are registered to the hard drive on your device, or if they are rejected by the system, they can be saved to your browser. You can also configure your browsing software so you are promptly notified of the manner in which cookies are accepted or rejected, before a cookie is registered to your device. For more information, refer to our policy on "How to state your preferences, according to the browser which you use"</p><p>Each browser has different settings in relation to the management of cookies and your preferences. It is described in your browser menu, which allows you to modify your preferences in respect of cookies.</p><p>For Microsoft Edge &#58; click on the 3 dots at the top right and click on settings. Then select Cookies and site permissions and select your preferences.</p><p>For Firefox &#58; open the menu on the top right with 3 lines, then select Options ; click on the Security and privacy settings tab then select your desired preferences.</p><p>For Chrome &#58; click on the 3 dots at the top right, then select Privacy and security, then select the desired options.</p> <p>For Safari &#58; select Safari > Preferences then select Security ; click on Display cookies then choose the desired options.</p> <p>Pour Opera &#58; open the Tools menu, then select Preferences ; click on the Advanced tab, then the Cookies heading and select Manage cookies ; choose the desired options.</p></section><section><h2>Your preferences are made known to us directly online</h2> <p>Please note that this procedure will not prevent the display of adverts on your device. It will only block technologies which allow personalised adverts, adapted to suit your browser and your interests.</p> <p>Please be aware that by stating your preferences, this will be recorded on a cookie. If you delete all cookies registered on your device (via your browser), we - or our service providers - will no longer know that you have chosen this option.</p> </section><section><h2>Your preferences are made known on interprofessional platforms</h2> <p>You can connect to the website 'Youronlinechoices', offered by digital advertising professionals gathered within the European association EDAA (European Digital Advertising Alliance), managed in France by the French Interactive Advertising Bureau.</p> <p>You can also familiarise yourself with the companies that belong to this platform, offering you the choice to refuse or accept cookies used by these companies which personalise adverts displayed on your device, according to your browsing history data, by looking online at &#58; http://www.youronlinechoices.com/fr/controler-ses-cookies/.</p> <p>This European platform is shared by hundreds of online advertising professionals and creates a centralised interface, which allows you to express your refusal or acceptance of cookies which may be used in order to adapt advertising content to your device browser.</p> <p>Please note that this procedure will not prevent the display of adverts on your device. It will only block technologies which allow targeted adverts, adapted to suit your browser and your interests.</p></section><section><h2>Personal data and browser data</h2> <p>We may personalise offers and adverts which are aimed at you and information relating to your device browser on our website or on sites or services edited by third parties and on which we issue cookies.</p> <p>Insofar as you have provided us with your personal data (especially concerning your electronic contact details) when you register or access our services, we may link your browser to your device, subject to your preferences. This data is treated by cookies which we issue concerning your personal data and personalised adverts which may be of particular interest to you.</p> <p>You can ask at any time to stop receiving personalised adverts or promotional material which is adapted to the browsing data from your device, by contacting us directly and for free, or by clicking on the unsubscribe link included on all promotional material which we may send you by email. If you choose to opt out, we will no longer send you personalised adverts adapted to the browsing data from your device.</p></section> <p> Last updated &#58; 27/10/2021</p>
+
+# contact page
+contact.meta-title.text: Contact-us
+contact.meta-description.text: Contact - Universal Flower
+contact.meta-keywords.text: 
+contact.meta-robots.text: 
+contact.h1.text: Do you have a question? Do not hesitate to contact us
+contact.body.text: On receipt of your request, you will receive a reply within 24 hours.
+contact.form.email.label: Your email address
+contact.form.email.invalid: Please enter a valid email address
+contact.form.email.required: Please enter an email address
+contact.form.name.label: Your name
+contact.form.name.required: Please enter your name
+contact.form.question.label: Your question
+contact.form.question.required: Please enter your question
+contact.form.question.information.text: If your request concerns an order, please indicate its number.
+contact.form.subject.label: Subject of your request
+contact.form.subject.required: Please describe the subject of your request
+contact.form.summit.button: Validate
+contact.demand.send.text: <p>Thank you for your inquiry. <br/> Our team will get back to you as soon as possible.</p>
+
+# registration page
+register.h1.text: Do you want to create an account? It's over here!
+registration.form.username.label: User connexion
+registration.form.password.label: Password
+registration.form.repeat.password.label: Confirm password
+registration.form.password.placeholder: Password
+registration.form.repeat.password.placeholder: Confirm password
+registration.form.password.length.error: The password must be at least 5 characters long
+registration.form.password.match.error: The password fields must match
+registration.form.email.label: Email
+registration.form.email.placeholder: Email
+registration.form.username.required: Username required
+registration.form.summit.button: Create my account
+
+# login page
+login.h1.text: Login area
+login.form.email.label: Email
+login.form.password.label: Password
+login.form.summit.button: Login
+
+# civility form
+civility.form.mrs.label: Mrs
+civility.form.mr.label: Mr
+civility.form.mr-mrs.label: Mr & Mrs
+civility.form.family.label: Family

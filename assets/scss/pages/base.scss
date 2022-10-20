@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $nunitoSansB, sans-serif;
+}
+
+body {
+    font-size: 1.8rem;
+    margin: 0;
+    background-color: color($whisper);
+    color: color($black);
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: color($black);
+
+    // &:hover {
+    //     color: color($primary-color);
+    //     text-decoration: underline;
+    // }
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.margin-right-sm {
+    margin-right: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h1, .h2, .h3 {
+    font-family: $alata;
+    color: color($primary-color);
+    font-size: 2.5rem;
+    letter-spacing: 0.3px;
+}
+.h2, .h3 {
+    font-size: 2.2rem;
+    font-weight: fw($light);
+}
+.h3 {
+    font-size: 1.7rem;
+}
+
+.bold {
+    font-weight: fw($bold);
+}
+
+@media (min-width: bp($lg)) {
+    .container {
+        max-width: 70%;
+    }
+    .min-height-80vh-lg {
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: bp($lg)) {
+    .container {
+        max-width: 85%;
+    }
+
+    .min-height-70vh-lg {
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: bp($md)) {
+    body {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: bp($sm)) {
+    .container {
+        max-width: 95%;
+        text-align: left;
+    }
+    .min-height-60vh-sm {
+        min-height: 60vh;
+    }
+    .h1{
+        font-size: 2rem;
+    }
+    .h2 {
+        font-size: 1.8rem;
+    }
+    .h3 {
+        font-size: 1.3rem;
+    }
+}
+
+
+.js-required {
+    display: none;
+    margin: 1rem;
+    text-align: center;
+    background-color: color($bizarre);
+    padding: 0.5em;
+    color: color($fedora);
+}

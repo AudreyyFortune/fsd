@@ -1,0 +1,45 @@
+{% set footerBlock = [
+    { 
+        title : ('footer.column-1.title.text'|trans),
+        content : [ 
+            {
+                title: ('footer.about-us.link.text')|trans,
+                link: path('static', {slug: 'footer.about-us.route.name'|trans})
+            },
+            {
+                title: ('footer.cookies.link.text')|trans,
+                link: path('static', {slug: 'footer.cookies.route.name'|trans})
+            },
+        ]
+    },
+    { 
+        title : ('footer.column-2.title.text'|trans),
+        content : [ 
+            {
+                title: ('footer.about-us.link.text')|trans,
+                link: path('static', {slug: 'footer.about-us.route.name'|trans})
+            },
+            {
+                title: ('footer.cookies.link.text')|trans,
+                link: path('static', {slug: 'footer.cookies.route.name'|trans})
+            },
+        ]
+    },
+
+    
+] %}
+
+        
+<footer class="footer">
+    <div class="footer-content container">
+        {% for block in footerBlock %}
+            <div class="footer-content-column">
+                <span class="footer-title">{{ block.title }}</span>
+                {% for content in block.content %}
+                    <ul><li><a href="{{ content.link }}">{{ content.title }}</a></li></ul>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="footer-company">{{ 'footer.compagny.address.text'|trans }}</div>
+</footer>

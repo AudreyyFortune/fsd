@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "core-js": "^3.25.0",
+    "date": "^2.0.0",
+    "date-and-time": "^2.4.1",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.2"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^2.1.0",
+    "file-loader": "^6.2.0",
+    "webpack-notifier": "^1.6.0"
+  }
+}

@@ -1,0 +1,21 @@
+{%for locale in locales %}
+    {% set route_name = app.request.get('_route') %} {#le nom de la route actuelle#}
+
+    {%if route_name%} {# si le nom de la route actuelle est disponible #}
+        {% set route_parameters = app.request.attributes.get('_route_params')|merge({'_locale':locale}) %}
+            <li>
+                <a href="{{url(route_name, route_parameters)}}">
+                    <img src="{{ asset('build/images/flag/lang/'~ locale ~'.png') }}" alt="{{locale}}" title="{{ ('header.lang.available.'~ locale ~'.text')|trans }}" width="27" height="20"/>
+                </a>
+            </li>
+{# {{dump(route_name)}}
+{{dump(route_parameters)}} #}
+
+        {#{%else%}
+        <a href="{{url('test',{'_locale':locale})}}">  redirection vers l'accueil
+        {{locale}}
+        </a>#}
+        {%endif%} 
+    {%endfor%}
+
+    

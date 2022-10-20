@@ -1,0 +1,17 @@
+
+// variables + fonts
+@import './settings/functions.scss';
+@import './settings/fonts.scss';
+@import './settings/variables.scss';
+
+// components
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/form.scss';
+@import './components/search-bloc.scss';
+
+// pages
+@import './pages/base.scss';
+@import './pages/international.scss';
+@import './pages/country.scss';
+@import './pages/product.scss';

@@ -1,0 +1,120 @@
+.international {
+    .h1, .h2 {
+        text-align: center;
+    }
+
+    &-intro {
+        text-align: justify;
+        font-style: italic;
+        margin: 1em auto;
+        padding: 1em;
+        background-color: color($athens-gray);
+    }
+
+    .section-reinsurance {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+
+        .block-reinsurance {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 45%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 3em;
+
+            .reinsurance {
+
+                &-img {
+                    margin: 0 auto 1em;
+                }
+
+                &-header {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 0.5em;
+
+                    .icon-svg {
+                        height: auto;
+                        margin-right: 1em;
+                    }
+                }
+
+                &-title {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    text-transform: uppercase;
+                }
+
+                &-subtitle {
+                    font-family: $nunitoSansB;
+                    font-size: 1.5rem;
+                    font-weight: fw($bold);
+                }
+                &-text {
+                    width: 90%;
+                    margin: 1em auto auto;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    &-seo-block {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        .seo-block {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: bp($md)) {
+    .international {
+        .section-reinsurance {
+
+            .block-reinsurance {
+                .reinsurance {
+                    &-text {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .international-seo-block {
+            flex-direction: column;
+            align-items: center;
+
+            .seo-block {
+                width: 95%;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: bp($xs)) {
+    .international {
+        .section-reinsurance {
+
+            .block-reinsurance {
+                width: 100%;
+                margin-top: 2.5rem;
+
+                .reinsurance {
+                    &-img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}

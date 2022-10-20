@@ -1,0 +1,7 @@
+{# funeral #}
+{% if product.isFuneral %}
+    {{ 'product.funeral.delivery.information.content.text.html'|trans|raw }}
+{% else %}
+{# normal #}
+    {{ 'product.normal.delivery.information.content.text.html'|trans|raw }}
+{% endif %}

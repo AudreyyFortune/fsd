@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+{% block body %}
+
+    <h1 class="h1">{{ 'login.h1.text'|trans }}</h1>
+
+    <form action="{{ path('login') }}" method="post" class="form-without-label">
+
+        {% if error %}
+            {{ error.messageKey|trans(error.messagedata, 'security') }}
+            {{ showErrors.errorAlert( [error]) }}
+        {% endif %}
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+{#            <label for="username" class="margin-right-sm form-label">Email:</label>#}
+            <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-input" placeholder="{{ 'login.form.email.label'|trans }}"/>
+        </div>
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+{#            <label for="password" class="margin-right-sm form-label">Password:</label>#}
+            <input type="password" id="password" name="_password" class="form-input" placeholder="{{ 'login.form.password.label'|trans }}" />
+        </div>
+
+        <button type="submit" class="form-button">{{ 'login.form.summit.button'|trans }}</button>
+    </form>
+
+{% endblock %}

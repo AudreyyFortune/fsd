@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <html lang="{{ lang }}" class="js-html" data-format-date="{{ formatDate|default('DD/MM/YYYY') }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		{% block seo %}{% endblock %}
+		<link rel="icon" type="image/png" href="https://i.aquarelle.com/01/images/favicon/arlequin/favicon-32x32.png" sizes="32x32">
+			{% block meta %}{% endblock %}
+			{% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+    </head>
+    <body
+        class="{{ bodyClass|default("") }}">{# c-page js-body  #}
+        {% block header %}{% include 'common/header.html.twig'%}{% endblock %}
+        <div class="container min-height-80vh-lg min-height-70vh-lg min-height-60vh-sm"> {% block body %}{% endblock %} </div> 
+        {% block footer %}{% include 'common/footer.html.twig'%}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+    </body>
+</html>

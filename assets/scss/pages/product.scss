@@ -1,0 +1,104 @@
+.product {
+    .h1 {
+        font-weight: fw($light);
+        font-size: 2em;
+    }
+    .product-detail {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        &-info-left {
+            width: 40%;
+        }
+        &-info-right {
+            width: 55%;
+
+            .product-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .product-title {
+                    text-transform: capitalize;
+                    font-weight: fw($bold);
+                    font-size: 1.5em;
+                }
+            }
+            .product-description {
+                font-family: $nunitoSansL;
+            }
+            .product-price {
+                color: color($baltic-sea);
+                &-list {
+                    margin: auto 10%;
+                }
+                &-label {
+                    text-transform: capitalize;
+                }
+                &-size {
+                    color: color($radical-red);
+                }
+            }
+            .product-delivery-information {
+                border: 1px solid color($ghost);
+                padding: 1.5rem;
+                margin: 2rem auto 0;
+
+                .delivery-information {
+
+                    &-title {
+                        color: color($primary-color);
+                        text-transform: uppercase;
+                        border-bottom: 1px dashed color($primary-color);
+                        text-align: center;
+                        font-weight: bolder;
+                        font-size: 1.5rem;
+                        padding-bottom: 1rem;
+                        font-family: $alata;
+                    }
+                    &-content {
+                        ul>li {
+                            list-style: inside;
+                            list-style-type: circle;
+                        }
+                    }
+                }
+            }
+            .product-form {
+                margin: 2rem 0 3rem;
+                label {
+                    font-weight: fw($bold);
+                    margin-right: 10px;
+                }
+                .form-button {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: bp($sm)) {
+        .h1 {
+            font-size: 1.7em;
+
+            @media (max-width: bp($xs)) {
+                font-size: 1.5em;
+            }
+        }
+        .product-detail {
+            flex-direction: column;
+            &-info-left {
+                margin: auto;
+            }
+            &-info-right {
+                width: 90%;
+                margin: auto;
+                .product-header {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+}
+

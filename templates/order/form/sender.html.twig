@@ -1,0 +1,49 @@
+<div class="form">
+
+    <h2 class="h2"><span class="number-form-step">3</span> {{ 'order.form.step.3.text'|trans }} </h2>
+
+
+
+    {#        {% if not formSender.vars.valid %}
+            {{ showErrors.errorAlert( [formSender.title, formSender.name, formSender.firstname, formSender.email, formSender.company, formSender.adress, formSender.zipcode, formSender.city, formSender.country, formSender.additional_adress, formSender.phone, formSender.details]) }}
+        {% endif %}#}
+
+
+    <div class="form-row">
+        {{ form_widget(formSender.title) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.name, {'attr': {'class': 'form-input', 'placeholder': 'order.form.name.placeholder'|trans }} ) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.firstname, {'attr': {'class': 'form-input', 'placeholder': 'order.form.firstname.placeholder'|trans }} ) }}
+    </div>
+
+    <div class="form-row">
+        {{ form_widget(formSender.email, {'attr': {'class': 'form-input', 'placeholder': 'order.form.email.placeholder'|trans }} ) }}
+    </div>
+
+    <div class="form-row">
+        {{ form_widget(formSender.company, {'attr': {'class': 'form-input', 'placeholder': 'order.form.company.placeholder'|trans }} ) }}
+    </div>
+
+    <div class="form-row">
+        {{ form_widget(formSender.adress, {'attr': {'class': 'form-input', 'placeholder': 'order.form.adress.placeholder'|trans }} ) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.zipcode, {'attr': {'class': 'form-input', 'placeholder': 'order.form.zipcode.placeholder'|trans }} ) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.city, {'attr': {'class': 'form-input', 'placeholder': 'order.form.city.placeholder'|trans }} ) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.country, {'attr': {'class': 'form-input', 'placeholder': 'order.form.country.placeholder'|trans }} ) }}
+    </div>
+    <div class="form-row">
+        {{ form_widget(formSender.phone, {'attr': {'class': 'form-input', 'placeholder': 'order.form.phone.placeholder'|trans }} ) }}
+    </div>
+
+
+
+
+</div>

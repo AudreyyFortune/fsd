@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+{% block seo %}
+	{% include 'common/meta-header.html.twig' with { 
+        'key' : 'contact', 
+        'title' :  'title.text' ,
+        'metaDescription' : 'meta-description.text' } only %}
+{% endblock %}
+
+
+{% block body %}
+
+        <div class="">
+            {% if isSend == false %}
+                <div class="text-center">
+                    <h1 class="h1">{{ 'contact.h1.text'|trans }}</h1>
+                    <p class="receipt-request">{{ 'contact.body.text'|trans }}</p>
+                </div>
+
+
+        <section class="">
+
+            {{ form_start(form) }}
+
+            {% if not form.vars.valid %}
+                {{ showErrors.errorAlert( [form.email, form.name, form.subject, form.question]) }}
+            {% endif %}
+
+                <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+                    {{ form_label(form.email, 'contact.form.email.label'|trans, {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-input', 'placeholder': 'contact.form.email.label'|trans }} ) }}
+                </div>
+                <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+                    {{ form_label(form.name, 'contact.form.name.label'|trans, {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-input', 'placeholder': 'contact.form.name.label'|trans }} ) }}
+                </div>
+                <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+                    {{ form_label(form.subject, 'contact.form.subject.label'|trans, {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}
+                    {{ form_widget(form.subject, {'attr': {'class': 'form-input', 'placeholder': 'contact.form.subject.label'|trans }} ) }}
+                </div>
+                <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+                    <div class="form-label">
+                        {{ form_label(form.question, 'contact.form.question.label'|trans, {'label_attr': {'class': 'margin-right-sm' }} ) }}
+                        <p class="contact-information-text">{{ 'contact.form.question.information.text'|trans }}</p>
+                    </div>
+                    {{ form_widget(form.question, {'attr': {'class': 'form-textarea', 'placeholder': 'contact.form.question.label'|trans }} ) }}
+                </div>
+
+                <button type="submit" class="form-button">{{ 'contact.form.summit.button'|trans }}</button>
+
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
+            </section>
+
+
+            {% else %}
+                <div class="email-send">{{ 'contact.demand.send.text'|trans|raw }}</div>
+                <img src="{{ asset('build/images/fast.jpg') }}"/>
+            {% endif %}
+        </div>
+
+
+
+{% endblock %}
