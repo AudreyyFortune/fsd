@@ -18,46 +18,53 @@ class OrderController extends AbstractController
     #[Route('/order', name: 'app_order')]
     public function index(Request $request, EntityManagerInterface $em, SessionInterface $session): Response
     {
+		// the request language
 		$lang = $request->getLocale();
 
-		$product = $session->get('product');
-		//dump($product);
-
-		$priceSize = $session->get('priceSize');
-		//dump($priceSize);
-
+		// the selected country and product are retrieved in session
 		$country = $session->get('country');
-		dump($country);
+		$product = $session->get('product');
 
+		// the price of the product selected in session is retrieved
+		$priceSize = $session->get('priceSize');
+		// the product is calculated with delivery costs
+		$deliveryCosts = 15.00;
+		$totalPrice = strval($priceSize + $deliveryCosts);
 
+		// we create the order form and submit it
 		$order = new Order();
 		$form = $this->createForm(OrderType::class, $order, [
 			'isFuneral' => $product['isFuneral'],
 		]);
 		$form->handleRequest($request);
 
-
 		if ($form->isSubmitted() && $form->isValid()) {
 
+			// updating of variables
 			$now = new \DateTime();
 			$order->setOrderDate($now);
 			$order->setIdProduct($product['id']);
 			$order->setProductPrice($priceSize);
-			$order->setTotal($priceSize + 15);
+			$order->setTotal($totalPrice);
 
+			// VOIR CE QU ON FAIT APRES
 			dump($order);
-
+			// insertion into database
 			$em->persist($order);
 			$em->flush();
 
 		}
 
+		// rendering
         return $this->render('order/index.html.twig', [
             'controller_name' => 'OrderController',
 			'bodyClass' => 'order',
 			'lang' => $lang,
 			'form' => $form->createView(),
-			'country' => $country
+			'country' => $country,
+			'product' => $product,
+			'productPrice' => $priceSize,
+			'totalPrice' => $totalPrice
         ]);
     }
 }

@@ -75,6 +75,7 @@ international.img.alt.text: Worldwide flower delivery
 
 
 # country page
+country.meta-description.text: International flower delivery with Universal Flower and its network of local florists - %country
 country.h1.text: Delivery by our florists - %country%
 country.catalog.one.price.text: From € %price%
 country.catalog.more.price.text: One price € %price%
@@ -102,8 +103,8 @@ order.summary.title.text: Order summary
 order.summary.delivery.text: Service fee
 order.summary.total.text: Total to pay
 order.cgv.accept.text: By making an order, you accept the general terms and conditions of sale.
-order.secure.payment.text: Make a secure payment
-order.protection.policy.text: <p>Universal Flower gives particular care and attention to the protection of its clients’ personal data.</p><p>Further, we commit to complying with the law n° 78-17 dated 6 January 1978 relating to freedom of information and data, as amended by the European 'GDPR' regulation 2016/679 dated 27 April 2016 relating to the protection of personal data.</p>
+order.button.secure.payment.text: Make a secure payment
+order.protection.policy.text.html: <p>Universal Flower gives particular care and attention to the protection of its clients’ personal data.</p><p>Further, we commit to complying with the law n° 78-17 dated 6 January 1978 relating to freedom of information and data, as amended by the European 'GDPR' regulation 2016/679 dated 27 April 2016 relating to the protection of personal data.</p>
 # recipient form
 order.recipient.delivery.date.text: Date of delivery
 order.recipient.form.delivery.date.text: To deliver on
@@ -113,11 +114,27 @@ order.recipient.form.funeral.delivery.hour.required.text: (*) IMPORTANT your ord
 order.recipient.title.text: Recipient's contact details
 order.recipient.field.required.text: The fields marked * are mandatory.
 order.recipient.form.funeral.decreased.text: Deceased
-order.recipient.society.label: Company
-order.recipient.phone.label: Recipient's phone (preceded by the country code)
+order.form.date.required: Please select a date
+order.form.hour.required: Please select a time
+order.recipient.form.name.required: The name of the sender is mandatory
+order.recipient.form.firstname.required:  The recipient's first name is mandatory
+order.recipient.form.adress.required: The recipient's address is mandatory
+order.recipient.form.zipcode.required: The postcode of the sender is mandatory
+order.recipient.form.zipcode.length:  Incorrect postal code
+order.recipient.form.city.required: The city of the sender is mandatory
+order.recipient.form.phone.required: The phone number of the sender is mandatory
 # sender form
 order.sender.title.text: Your contact details
 order.sender.form.phone.label: Sender's phone number
+order.sender.form.name.required: Your name is mandatory
+order.sender.form.firstname.required: Your first name is mandatory
+order.sender.form.email.required: Your email is required
+order.sender.form.email.invalid: Your email is invalid
+order.sender.form.adress.required: Your adress is mandatory
+order.sender.form.zipcode.required: Your zipcode is mandatory
+order.sender.form.city.required: Your city is mandatory
+order.sender.form.country.required: Your country is mandatory
+order.sender.form.phone.required: Your phone number is mandatory
 # order form
 order.form.name.placeholder: Surname *
 order.form.firstname.placeholder: Firstname *
@@ -145,7 +162,7 @@ about-us.body.text.html: <p>Flower-delivery.aquarelle is a website of the Aquare
 # cookies page
 cookies.meta-title.text: Policy relating to cookies | Universal Flower
 cookies.meta-description.text: Cookies - flower-delivery.aquarelle - Universal Flower
-cookies.meta-keywords.text: 
+cookies.meta-keywords.text: cookies
 cookies.meta-robots.text: index,follow
 cookies.h1.text: Cookies
 cookies.body.text.html: <section><h2>Personal data</h2> <p>In accordance with the 'Information and Freedom' law, the information requested by Universal Flower is strictly necessary for the registration of your account. It is also necessary for the commercial management and functionality of our website, making the advertising displayed on it more relevant to your interests and providing you with a good experience when you browse. This information can be shared with the companies forming part of the Aquarelle group. You can access and amend your personal data. You can also raise objections to the handling of your data.</p> <p>To exercise this last right, you only need to send us your first name, surname, address, email and a copy of your ID in order that we can respond as quickly as possible, to the following address &#58; Universal Flower 24-32 rue Jacques Ibert - 92300 LEVALLOIS-PERRET France</p></section> <section><h2>Our use of cookies</h2> <p>Our cookies policy provides further information regarding your rights in respect of data, as well as the source and use of browser data when you use our website.</p> <p>This policy is therefore important for you to ensure that you have the best experience using our Services. It is also important for us, because we want to respond to your questions fully and accurately regarding your browsing experience. We also want to take your wishes into account.</p> <p>Therefore, when you use our website, information relating to browsing on your device (computer, tablet, smartphone etc.) on our site will be registered on ‘the Cookies’ files installed on your device. In addition, we can buy advertising slots, directly or through an intermediary of our service providers (communication agency, advertising departments), in order to promote our services and offers on third party sites and applications, through advertising content (text, graphics, animations, videos etc.) distributed by our sites/applications. Be aware that cookie transmitters can modify the data which they contain.</p></section> <section><h2>Cookies used by Universal Flower</h2> <p>When you connect to our website, we may choose, subject to your preferences (see 'Your preferences concerning cookies'), to install various cookies on your device which allow us to recognise the browser on your device for the duration that the cookie remains valid.</p> <p>These Cookies allow us to &#58; <ul><li>collect statistics and record the number of visits to our site and the use of various website functions (headings and content visited, browsing history), allowing us to tailor content to suit your interests and to improve the functionality of our website ;</li><li>adapt the presentation of our site to better suit your device’s display settings (language preference, display resolution, operating system, etc..) during your visits to our website, according to the materials and visualisation or reading softwares that best suit your device;</li><li>memorise data relating to the forms which you have completed on our site (registration or access to your account), data relating to products, services or information which you have selected on our site (services, contents of order basket, etc.) ;</li><li>give you access to private and personal spaces on our site, such as your account, using the identifiers or data which you have previously disclosed ;</li> <li>put security measures in place, for example when you are asked to reconnect in order to view content or continue with your order after a certain amount of time has lapsed.</li></ul></p> <p>What is the purpose of cookies connected to our advertising content, which is distributed by third parties? When you access a website or application containing advertising slots featuring one of our adverts, this advert is likely to contain a cookie.This cookie is also likely, subject to your preferences, to be registered on your device, which enables us to recognise the browser on your device for the duration that the cookie remains valid. Cookies contained in adverts distributed by third parties are used for the purposes described below, subject to your preferences and the configuration of your navigation software when you visit our website. You can express your preferences in relation to cookies at any time. If your device allows registration of cookies and according to your preferences, the Cookies which we use allow us to do the following &#58; <ul><li>collect statistics and record the number of visits to our site and the use of various website functions (headings and content visited, browsing history), allowing us to tailor content to suit your interests and to improve the functionality of our website ;</li><li>adapt the presentation of our site to better suit your device’s display settings (language preference, display resolution, operating system, etc..) during your visits to our website, according to the materials and visualisation or reading softwares that best suit your device;</li><li>memorise data relating to forms which you have completed on our site (registration or access to your account), data relating to products, services or information which you have selected on our site (services, contents of order basket, etc.) ;</li><li>give you access to private and personal spaces on our site, such as your account, using the identifiers or data which you have previously disclosed ;</li></p></section> <section><h2>What is the point in seeing personalised adverts which are adapted according to your browsing history ?</h2> <p>Our aim is to present you with the adverts which are most relevant to your interests. To this end, cookies technology enables us to determine in real time which adverts to display on your device, according to your recent browsing history, on several sites or applications.</p> <p>Your interest in advertising content is displayed on your device when you browse a site, which often determines the advertising content that we show you, so you can make the best use of our services. This tailoring of advertising content is often provided to users for free. Undoubtedly, you prefer to see adverts which match your interests rather than adverts which do not interest you whatsoever. Similarly, advertisers want their adverts and offers to be displayed to the users who are most interested in them.</p> <p>The shared use of your device and browser settings with other people in relation to cookies is a matter of personal choice and responsibility.</p> <h3>Your preferences regarding cookies</h3><p>There are many options available for you to manage cookies. Every configuration that you may choose will affect your browsing on the Internet and the conditions of access to certain services which require the use of Cookies.</p> <p>You can configure your browsing software so that cookies are registered to the hard drive on your device, or if they are rejected by the system, they can be saved to your browser. You can also configure your browsing software so you are promptly notified of the manner in which cookies are accepted or rejected, before a cookie is registered to your device. For more information, refer to our policy on "How to state your preferences, according to the browser which you use"</p><p>Each browser has different settings in relation to the management of cookies and your preferences. It is described in your browser menu, which allows you to modify your preferences in respect of cookies.</p><p>For Microsoft Edge &#58; click on the 3 dots at the top right and click on settings. Then select Cookies and site permissions and select your preferences.</p><p>For Firefox &#58; open the menu on the top right with 3 lines, then select Options ; click on the Security and privacy settings tab then select your desired preferences.</p><p>For Chrome &#58; click on the 3 dots at the top right, then select Privacy and security, then select the desired options.</p> <p>For Safari &#58; select Safari > Preferences then select Security ; click on Display cookies then choose the desired options.</p> <p>Pour Opera &#58; open the Tools menu, then select Preferences ; click on the Advanced tab, then the Cookies heading and select Manage cookies ; choose the desired options.</p></section><section><h2>Your preferences are made known to us directly online</h2> <p>Please note that this procedure will not prevent the display of adverts on your device. It will only block technologies which allow personalised adverts, adapted to suit your browser and your interests.</p> <p>Please be aware that by stating your preferences, this will be recorded on a cookie. If you delete all cookies registered on your device (via your browser), we - or our service providers - will no longer know that you have chosen this option.</p> </section><section><h2>Your preferences are made known on interprofessional platforms</h2> <p>You can connect to the website 'Youronlinechoices', offered by digital advertising professionals gathered within the European association EDAA (European Digital Advertising Alliance), managed in France by the French Interactive Advertising Bureau.</p> <p>You can also familiarise yourself with the companies that belong to this platform, offering you the choice to refuse or accept cookies used by these companies which personalise adverts displayed on your device, according to your browsing history data, by looking online at &#58; http://www.youronlinechoices.com/fr/controler-ses-cookies/.</p> <p>This European platform is shared by hundreds of online advertising professionals and creates a centralised interface, which allows you to express your refusal or acceptance of cookies which may be used in order to adapt advertising content to your device browser.</p> <p>Please note that this procedure will not prevent the display of adverts on your device. It will only block technologies which allow targeted adverts, adapted to suit your browser and your interests.</p></section><section><h2>Personal data and browser data</h2> <p>We may personalise offers and adverts which are aimed at you and information relating to your device browser on our website or on sites or services edited by third parties and on which we issue cookies.</p> <p>Insofar as you have provided us with your personal data (especially concerning your electronic contact details) when you register or access our services, we may link your browser to your device, subject to your preferences. This data is treated by cookies which we issue concerning your personal data and personalised adverts which may be of particular interest to you.</p> <p>You can ask at any time to stop receiving personalised adverts or promotional material which is adapted to the browsing data from your device, by contacting us directly and for free, or by clicking on the unsubscribe link included on all promotional material which we may send you by email. If you choose to opt out, we will no longer send you personalised adverts adapted to the browsing data from your device.</p></section> <p> Last updated &#58; 27/10/2021</p>
@@ -153,19 +170,19 @@ cookies.body.text.html: <section><h2>Personal data</h2> <p>In accordance with th
 # contact page
 contact.meta-title.text: Contact-us
 contact.meta-description.text: Contact - Universal Flower
-contact.meta-keywords.text: 
-contact.meta-robots.text: 
+contact.meta-robots.text: noindex, nofollow
+contact.meta-keywords.text: contact
 contact.h1.text: Do you have a question? Do not hesitate to contact us
 contact.body.text: On receipt of your request, you will receive a reply within 24 hours.
-contact.form.email.label: Your email address
+contact.form.email.label: Your email address *
 contact.form.email.invalid: Please enter a valid email address
 contact.form.email.required: Please enter an email address
-contact.form.name.label: Your name
+contact.form.name.label: Your name *
 contact.form.name.required: Please enter your name
-contact.form.question.label: Your question
+contact.form.question.label: Your question *
 contact.form.question.required: Please enter your question
 contact.form.question.information.text: If your request concerns an order, please indicate its number.
-contact.form.subject.label: Subject of your request
+contact.form.subject.label: Subject of your request *
 contact.form.subject.required: Please describe the subject of your request
 contact.form.summit.button: Validate
 contact.demand.send.text: <p>Thank you for your inquiry. <br/> Our team will get back to you as soon as possible.</p>

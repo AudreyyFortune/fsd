@@ -1,9 +1,3 @@
-test: # à supprimer
-    controller: App\Controller\TestController::index
-    path:
-        en: /testen
-        fr: /testfr
-
 international:
     controller: App\Controller\InternationalController::index
     path:

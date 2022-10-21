@@ -1,16 +1,15 @@
+{% import 'common/show-alert.html.twig' as showErrors %}
+
 <div class="form">
-
     <h2 class="h2"><span class="number-form-step">3</span> {{ 'order.form.step.3.text'|trans }} </h2>
+    <p>{{ 'order.recipient.field.required.text'|trans }}</p>
 
-
-
-    {#        {% if not formSender.vars.valid %}
-            {{ showErrors.errorAlert( [formSender.title, formSender.name, formSender.firstname, formSender.email, formSender.company, formSender.adress, formSender.zipcode, formSender.city, formSender.country, formSender.additional_adress, formSender.phone, formSender.details]) }}
-        {% endif %}#}
-
+    {% if not formSender.vars.valid %}
+            {{ showErrors.errorAlert( [formSender.title, formSender.name, formSender.firstname, formSender.email, formSender.company, formSender.adress, formSender.zipcode, formSender.city, formSender.country, formSender.phone]) }}
+    {% endif %}
 
     <div class="form-row">
-        {{ form_widget(formSender.title) }}
+        {{ form_widget(formSender.title, {'attr': {'class': 'form-input form-select'}}) }}
     </div>
     <div class="form-row">
         {{ form_widget(formSender.name, {'attr': {'class': 'form-input', 'placeholder': 'order.form.name.placeholder'|trans }} ) }}
@@ -42,8 +41,5 @@
     <div class="form-row">
         {{ form_widget(formSender.phone, {'attr': {'class': 'form-input', 'placeholder': 'order.form.phone.placeholder'|trans }} ) }}
     </div>
-
-
-
 
 </div>

@@ -7,18 +7,15 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-
         &-info-left {
             width: 40%;
         }
         &-info-right {
             width: 55%;
-
             .product-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
                 .product-title {
                     text-transform: capitalize;
                     font-weight: fw($bold);
@@ -44,9 +41,7 @@
                 border: 1px solid color($ghost);
                 padding: 1.5rem;
                 margin: 2rem auto 0;
-
                 .delivery-information {
-
                     &-title {
                         color: color($primary-color);
                         text-transform: uppercase;
@@ -81,7 +76,6 @@
     @media (max-width: bp($sm)) {
         .h1 {
             font-size: 1.7em;
-
             @media (max-width: bp($xs)) {
                 font-size: 1.5em;
             }
@@ -101,4 +95,3 @@
         }
     }
 }
-

@@ -1,0 +1,26 @@
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+<div class="form">
+    <h2 class="h2"><span class="number-form-step">1</span> {{ 'order.form.step.1.text'|trans }} </h2>
+
+    {% if not form.vars.valid %}
+        {{ showErrors.errorAlert( [form.delivery_date]) }}
+        {% if product.isFuneral %}
+            {{ showErrors.errorAlert( [form.delivery_hour]) }}
+        {% endif %}
+    {% endif %}
+
+    <div class="form-row">
+        <h3>{% if product.isFuneral %}{{ 'order.recipient.form.funeral.delivery.date.text'|trans }}{% else %}{{ 'order.recipient.form.delivery.date.text'|trans }}{% endif %}</h3>
+        {{ form_widget(form.delivery_date, {'attr': {'class': 'form-input'  }} ) }}
+    </div>
+
+    {% if form.delivery_hour is defined %}
+        {% if product.isFuneral %}<h3>{{ 'order.recipient.form.funeral.delivery.hour.text'|trans }}</h3>{% endif %}
+        <div class="form-row">
+            {{ form_widget(form.delivery_hour, {'attr': {'class': 'select-hour'  }} ) }}
+        </div>
+        {% if product.isFuneral %}<p>{{ 'order.recipient.form.funeral.delivery.hour.required.text'|trans }}</p>{% endif %}
+    {% endif %}
+
+</div>

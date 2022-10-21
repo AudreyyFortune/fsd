@@ -12,7 +12,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-
 class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'app_contact')]
@@ -36,7 +35,7 @@ class ContactController extends AbstractController
             $demand->setDateSend($now);
             // sending an email
 			//// REVOIR POUR NE PAS RETURN VOID
-            $isSend = $mailer->sendEmail($demand->getEmail(), $demand->getSubject(), $demand->getQuestion());
+            $mailer->sendEmail($demand->getEmail(), $demand->getSubject(), $demand->getQuestion());
             // insertion into database
             $em->persist($demand);
             $em->flush();

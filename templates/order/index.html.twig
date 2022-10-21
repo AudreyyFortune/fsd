@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-{% import 'common/show-alert.html.twig' as showErrors %}
 
 {% block seo %}
     {% include 'common/meta-header.html.twig' with {
@@ -10,59 +9,45 @@
 
 
 {% block body %}
+    <div class="order-detail">
 
-    <section>
-
-
-
-        {{ form_start(form) }}
-        COMMENCER
-        <div class="form">
-            <h2 class="h2"><span class="number-form-step">1</span> {{ 'order.form.step.1.text'|trans }} </h2>
-
-            <div class="form-row">
-                {#            revoir le design#}
-                {{ form_widget(form.delivery_date, {'attr': {'class': 'form-input'  }} ) }}
+        <article class="order-summary">
+            <h1 class="h1">{{ 'order.summary.title.text'|trans }}</h1>
+            <div class="order-product-detail">
+                <div class="product-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt=""/></div>
+                <div class="product-name-price"><span class="product-name">{{ product.name }}</span> <span class="product-price">{{ productPrice }} €</span></div>
+                <div class="product-delivery"><span class="">{{ 'order.summary.delivery.text'|trans }}</span><span>15.00 €</span></div>
+                <div class="product-total"><span class="">{{ 'order.summary.total.text'|trans }}</span><span>{{ totalPrice }} €</span></div>
             </div>
-            {% if form.delivery_hour is defined %}
-            <div class="form-row">
-                {#            revoir le design#}
-                {{ form_widget(form.delivery_hour, {'attr': {'class': ''  }} ) }}
-            </div>
-            {% endif %}
-        </div>
+        </article>
 
+        <section class="order-form">
 
+            {{ form_start(form) }}
 
-        {% include 'order/form/recipient.html.twig' with {
-            'formRecipient': form.recipient,
-            'country': country
-        } only %}
+                {% include 'order/form/date.html.twig' with {
+                    'form': form,
+                    'product': product
+                } only %}
 
-        {% include 'order/form/sender.html.twig' with {
-            'formSender' : form.sender
-        } only %}
+                {% include 'order/form/recipient.html.twig' with {
+                    'formRecipient': form.recipient,
+                    'country': country,
+                    'product': product
+                } only %}
 
+                {% include 'order/form/sender.html.twig' with {
+                    'formSender' : form.sender
+                } only %}
 
+                <p class="order-cgv">{{ 'order.cgv.accept.text'|trans }}</p>
+                <button type="submit" class="form-button">{{ 'order.button.secure.payment.text'|trans }}</button>
+                <div class="order-policy">{{ 'order.protection.policy.text.html'|trans|raw }}</div>
 
-        // si on supprime, revoir le JS
-        // on a supprimer le js donc supprimer la classe
-        <button type="submit">ICI COMMANDER</button>
+                {{ form_rest(form) }}
+            {{ form_end(form) }}
 
+        </section>
 
-        REST
-        {{ form_rest(form) }}
-        FINI
-        {{ form_end(form) }}
-
-
-
-
-    </section>
-
-
-
+    </div>
 {% endblock %}
-
-
-

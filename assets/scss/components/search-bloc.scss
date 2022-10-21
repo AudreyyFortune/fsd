@@ -1,9 +1,7 @@
 .search-blocs {
     display: flex;
     justify-content: space-around;
-
     .search-bloc {
-
         &--select {
             height: 40px;
             padding-left: 10px;
@@ -12,30 +10,24 @@
             border: 2px solid color($alto);
             border-radius: 5px;
         }
-
         &--button {
             height: 40px;
-            min-width: 100px;
+            min-width: 150px;
             background-color: color($feijoa);
             border: 2px solid color($rainee);
             border-radius: 5px;
             cursor: pointer;
-
             &:hover {
                 background-color: color($pastel-green);
             } 
         }
-        
     }
 }
-
 
 @media screen and (max-width: bp($xs)) {
     .search-blocs {
         flex-direction: column;
-
         .search-bloc {
-
             &--select, &--button {
                 text-align: center;
                 width: 100%;

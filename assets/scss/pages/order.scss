@@ -1,0 +1,88 @@
+.order {
+    &-detail {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+            @media (max-width: bp($sm)) {
+                flex-direction: column;
+            }
+    }
+    &-form {
+        width: 50%;
+            @media (max-width: bp($xl)) {
+                width: 60%;
+            }
+        .form-input, .form-textarea {
+            width: 100%;
+        }
+        .form-row .select-hour {
+            select {
+                width: 35%;
+                text-align: center;
+                text-transform: capitalize;
+                background-color: color($white);
+                border: 1px solid color($alto);
+                border-radius: 5px;
+                margin: 0 10px;
+            }
+        }
+        .form-button {
+            width: 80%;
+            padding: 1.5rem;
+            background-color: color($green);
+            color: color($white);
+            font-size: 1.8rem;
+            &:hover {
+                background-color: color($screaming-green);
+            }
+        }
+        .order-cgv {
+            font-size: 1.5rem;
+            text-align: center;
+            font-style: italic;
+        }
+        .order-policy {
+            font-size: 1.6rem;
+            color: color($baltic-sea);
+        }
+    }
+    &-summary {
+        width: 35%;
+        padding: 2rem;
+        background-color: color($white);
+        height: max-content;
+        .order-product-detail {
+            display: flex;
+            flex-direction: column;
+            .product-name-price, .product-delivery, .product-total {
+                display: flex;
+                justify-content: space-between;
+                margin: 0.5rem 0;
+                .product-name {
+                    text-transform: capitalize;
+                    font-weight: fw($bold);
+                }
+                .product-price {
+                    font-weight: fw($bold);
+                }
+            }
+            .product-total {
+                color: color($eastern-blue);
+                font-weight: fw($bold);
+            }
+        }
+    }
+
+    @media (max-width: bp($sm)) {
+        &-form, &-summary {
+            width: 95%;
+            margin: auto auto 3em;
+        }
+        &-summary {
+            .product-img {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+}

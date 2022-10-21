@@ -24,8 +24,8 @@ class CountryTranslationRepository extends ServiceEntityRepository
     public function getCountriesList($lang)
     {    
         return $this->createQueryBuilder('ct')        
-                    ->select('ct.name, ct.name_file, c.isocode, c.sapa')        
-                    ->join('ct.id_country', 'c')        
+                    ->select('c.id, ct.name, ct.name_file, c.isocode, c.sapa')
+                    ->join('ct.id_country', 'c')
                     ->where('ct.locale = :locale')        
                     ->setParameter('locale', $lang)       
                     ->orderBy('ct.name', 'ASC')        
@@ -34,6 +34,34 @@ class CountryTranslationRepository extends ServiceEntityRepository
                     ;   
             
     }
+
+	public function getCountryIdBySlug($lang, $slug)
+	{
+		return $this->createQueryBuilder('ct')
+					->select('c.id')
+					->join('ct.id_country', 'c')
+					->where('ct.name_file = :slug')
+					->setParameter('slug', $slug)
+					->andWhere('ct.locale = :locale')
+					->setParameter('locale', $lang)
+					->getQuery()
+					->getResult()
+					;
+	}
+
+
+	public function getNameFileCountryByIdAndLang($idCountry, $lang)
+	{
+		return $this->createQueryBuilder('ct')
+					->select('ct.name_file')
+					->where('ct.locale = :locale')
+					->setParameter('locale', $lang)
+					->andWhere('ct.id_country = :idCountry')
+					->setParameter('idCountry', $idCountry)
+					->getQuery()
+					->getResult()
+					;
+	}
 
 
     // public function add(CountryTranslation $entity, bool $flush = false): void

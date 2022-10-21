@@ -1,26 +1,21 @@
 .topbar {
 	background-color: color($powder-ash);
-
 	.container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		height: 4rem;
-
 		.pull-right {
 			display: flex;
 			justify-content: inherit;
-
 			.topbar-contact {
 				margin-right: 3rem;
 				font-size: 1.5rem;
 			}
 			.topbar-lang {
 				display: flex;
-				
 				li {
 					margin-left: 1rem;
-
 					img {
 						border-radius: 0.5rem;
 					}
@@ -33,56 +28,47 @@
 	}
 }
 
-
 .header {
 	margin: 1em 0 1.5em;
 	padding-bottom: 2em;
 	border-bottom: 1px solid color($primary-color);
-
 	&-content{
 		margin: auto;
 		position: relative;
 		text-align: center;
-
 		.header-home-link {
 			text-decoration: none;
-
 			.header-logo {
 				color: color($primary-color);
 				font-size: 1.3em;
 				font-weight: fw($light);
 				line-height: .7;
-		
-				.uppercase {
+				.logo-uppercase {
 					padding: .2em 0;
 					display: block;
 					font-size: 4rem;
 					letter-spacing: 0;
-
-					@media (max-width: bp($sm)) {
-						font-size: 3rem;
-					}
-                    @media (max-width: bp($xs)) {
-                        font-size: 2rem;
-                    }
+                    text-transform: uppercase;
+                        @media (max-width: bp($sm)) {
+                            font-size: 3rem;
+                        }
+                        @media (max-width: bp($xs)) {
+                            font-size: 2rem;
+                        }
 				}
-		
 				.logo-subtitle {
 					display: block;
 					text-indent: 7em;
-
-					@media (max-width: bp($sm)) {
-						font-size: 1.8rem;
-					}
-                    @media (max-width: bp($xs)) {
-                        font-size: 1.3rem;
-                    }
+                        @media (max-width: bp($sm)) {
+                            font-size: 1.8rem;
+                        }
+                        @media (max-width: bp($xs)) {
+                            font-size: 1.3rem;
+                        }
 				}
 			}
-		}		
-
+		}
 	}
-
     &-connection {
         position: absolute;
         top: 0;
@@ -90,7 +76,6 @@
         padding: 0 5em 4em;
         display: flex;
         flex-direction: column;
-
         .connection-link {
             padding: 0.5rem;
             &:hover {
@@ -105,7 +90,6 @@
             }
         }
     }
-
 }
 
 @media screen and (max-width: bp($sm)) {
@@ -119,7 +103,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: bp($xs)) {
 	.topbar {

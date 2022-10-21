@@ -28,21 +28,21 @@ class RecipientType extends AbstractType
             ->add('name', TextType::class, [
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.name.required',
+						'message' => 'order.recipient.form.name.required',
 					]),
 				],
 			])
             ->add('firstname', TextType::class, [
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.firstname.required',
+						'message' => 'order.recipient.form.firstname.required',
 					]),
 				],
 			])
             ->add('adress', TextType::class, [
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.adress.required',
+						'message' => 'order.recipient.form.adress.required',
 					]),
 				],
 			])
@@ -50,28 +50,27 @@ class RecipientType extends AbstractType
 				'constraints' => [
 					new Length([
 						'max' => 5,
-						'maxMessage' => 'recipient.form.zipcode.length',
+						'maxMessage' => 'order.recipient.form.zipcode.length',
 					]),
 					new NotBlank([
-						'message' => 'recipient.form.zipcode.required',
+						'message' => 'order.recipient.form.zipcode.required',
 					]),
 				],
 			])
             ->add('city', TextType::class, [
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.city.required',
+						'message' => 'order.recipient.form.city.required',
 					]),
 				],
 			])
             ->add('country', TextType::class, [
-				//'disabled' => true,
 				'attr' => [
 					'class'=> 'form-input'
 				],
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.country.required',
+						'message' => 'order.recipient.form.country.required',
 					]),
 				],
 			])
@@ -81,7 +80,7 @@ class RecipientType extends AbstractType
             ->add('phone', TelType::class, [
 				'constraints' => [
 					new NotBlank([
-						'message' => 'recipient.form.phone.required',
+						'message' => 'order.recipient.form.phone.required',
 					]),
 				],
 			])

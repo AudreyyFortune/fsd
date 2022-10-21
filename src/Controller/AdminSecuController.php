@@ -46,7 +46,6 @@ class AdminSecuController extends AbstractController
         ]);
     }
 
-
 	#[Route('/login', name: 'app_login')]
 	public function login(Request $request, AuthenticationUtils $authenticationUtils)
 	{

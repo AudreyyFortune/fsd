@@ -50,10 +50,8 @@ class ProductController extends AbstractController
 
 		// the different product sizes and associated prices are collected for this product
 		$productSize = $this->productSizePriceRepository->findBy(['name' => $productTranslation['price_name']]);
-
 		$productSize['name'] = $productSize[0]->getName();
 		$productSize['list_size']['product.category_1.size.text.html'] = $productSize[0]->getCategory1();
-
 		if ($productSize['name'] !== 'single') {
 			$productSize['list_size']['product.category_2.size.text.html'] = $productSize[0]->getCategory2();
 			$productSize['list_size']['product.category_3.size.text.html'] = $productSize[0]->getCategory3();

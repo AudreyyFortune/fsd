@@ -8,24 +8,20 @@
         'metaDescription' : 'meta-description.text' } only %}
 {% endblock %}
 
-
 {% block body %}
 
-        <div class="">
-            {% if isSend == false %}
-                <div class="text-center">
-                    <h1 class="h1">{{ 'contact.h1.text'|trans }}</h1>
-                    <p class="receipt-request">{{ 'contact.body.text'|trans }}</p>
-                </div>
+    {% if isSend == false %}
+        <div class="text-center">
+            <h1 class="h1">{{ 'contact.h1.text'|trans }}</h1>
+            <p class="receipt-request">{{ 'contact.body.text'|trans }}</p>
+        </div>
 
-
-        <section class="">
-
+        <section class="contact-form">
             {{ form_start(form) }}
 
-            {% if not form.vars.valid %}
-                {{ showErrors.errorAlert( [form.email, form.name, form.subject, form.question]) }}
-            {% endif %}
+                {% if not form.vars.valid %}
+                    {{ showErrors.errorAlert( [form.email, form.name, form.subject, form.question]) }}
+                {% endif %}
 
                 <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
                     {{ form_label(form.email, 'contact.form.email.label'|trans, {'label_attr': {'class': 'margin-right-sm form-label' }} ) }}
@@ -50,16 +46,11 @@
                 <button type="submit" class="form-button">{{ 'contact.form.summit.button'|trans }}</button>
 
                 {{ form_rest(form) }}
-                {{ form_end(form) }}
-            </section>
+            {{ form_end(form) }}
+        </section>
 
-
-            {% else %}
-                <div class="email-send">{{ 'contact.demand.send.text'|trans|raw }}</div>
-                <img src="{{ asset('build/images/fast.jpg') }}"/>
-            {% endif %}
-        </div>
-
-
+        {% else %}
+            <div class="email-send">{{ 'contact.demand.send.text'|trans|raw }}</div>
+        {% endif %}
 
 {% endblock %}

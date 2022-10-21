@@ -1,0 +1,16 @@
+.contact-information-text {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.contact-form {
+    width: 70%;
+    margin: auto;
+        @media (max-width: bp($lg)) {
+            width: 90%;
+        }
+}
+.email-send {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5em;
+}

@@ -1,31 +1,25 @@
 .footer {
     border-top: 1px solid color($primary-color);
-
     &-content {
         padding: 3rem 0 2rem;
         display: flex;
         justify-content: center;
-
         &-column {
             margin-right: 3rem;
-            
             @media screen and (max-width: bp($xs)) {
                 margin-right: 1rem;
             }
-
             a:hover {
                 color: color($powder-ash);
             }
         }
     }
-
     &-title {
         color: color($primary-color);
         text-transform: capitalize;
         font-family: $nunitoSansL;
         font-size: 2rem;
     }
-
     &-company {
         color: color($white);
         background-color: color($primary-color);

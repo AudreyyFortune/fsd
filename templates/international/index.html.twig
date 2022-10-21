@@ -9,7 +9,6 @@
 {% endblock %}
 
 
-
 {% block body %}
 
 <h1 class="h1">{{ 'international.h1.text'|trans }}</h1>
@@ -17,17 +16,12 @@
 <img src="{{ asset('build/images/banniere_1522x300.png') }}" alt="{{ 'international.img.alt.text'|trans }}" loading="lazy">
 
 <h2 class="h2">{{ 'international.h2.text'|trans }}</h2>
-
-
-{# <div class="content">{{ (key ~'.body.text.html')|trans|raw }}</div> #}
-
-    {% include 'common/search-bloc.html.twig' with { 
-            'countries': searchBloc.countries,
-            'catalogEvents': searchBloc.catalogEvents,
-            hasEmptyOption: true,
-        } only 
-    %}
-
+{% include 'common/search-bloc.html.twig' with {
+        'countries': searchBloc.countries,
+        'catalogEvents': searchBloc.catalogEvents,
+        hasEmptyOption: true,
+    } only
+%}
 <div class="international-intro">{{ 'international.introduction.text'|trans }}</div>
 
 {% include 'common/reinsurance.html.twig' %}
@@ -36,4 +30,3 @@
         <div class="seo-block">{{ 'international.seo.block.2.text.html'|trans|raw }}</div>
     </section>
 {% endblock %}
-

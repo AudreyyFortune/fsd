@@ -1,65 +1,44 @@
 {% set hasEmptyOption = hasEmptyOption ?? false %}
 
-
 <p class="js-country-required js-required">{{ 'search-bloc.country.required'|trans }}</p>
 
 <section class="search-blocs">
 
+    {% if countries is defined and countries is not empty %}
+        <div class="search-bloc">
+            <select class="search-bloc--select js-country-search-countries uppercase">
 
-{% if countries is defined and countries is not empty %}
-	<div class="search-bloc">
-		<select class="search-bloc--select js-country-search-countries uppercase">
-	
-			{% if hasEmptyOption %}
-				<option value="" {% if country is not defined or country is null %} selected="selected" data-country-selected="true" {% endif %} class="uppercase text-center">{{ 'country.delivery.search.bloc.text'|trans }}
-				</option>
-			{% endif %}
-			{% for countryLink in countries %}
-<option value="{{ path('country', {slug:countryLink.name_file}) }}" class="uppercase text-center" {% if country is defined and country is not null and countryLink.name == country|capitalize %} selected="selected" data-country-selected="true" {% endif %}>
+                {% if hasEmptyOption %}
+                    <option value="" {% if country is not defined or country is null %} selected="selected" data-country-selected="true" {% endif %}>
+                        {{ 'country.delivery.search.bloc.text'|trans }}
+                    </option>
+                {% endif %}
 
+                {% for countryLink in countries %}
+                    <option value="{{ path('country', {slug:countryLink.name_file}) }}" class="uppercase text-center"
+                            {% if country is defined and country is not null and countryLink.name|upper == country|upper %} selected="selected" data-country-selected="true" {% endif %}>
+                        {{ countryLink.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    {% endif %}
 
-					{{ countryLink.name }}
-				</option>
-			{% endfor %}
-		</select>
-	</div>
-{% endif %}
-
-
-{% if catalogEvents is defined and catalogEvents is not empty %}
-	<div class="search-bloc">
-		<select class="search-bloc--select js-country-search-events js-gtm-occasion-selector uppercase">
-			{# {% if hasEmptyOption %}
-				<option value="" data-event-id="" data-gtm-event-label="{{ 'catalog.event.accueil.text'|trans({}, null, 'en') }}" class="uppercase text-center" {% if selectedEvent is not defined or selectedEvent is null %} selected="selected" {% endif %}>{{ 'event.search.bloc.text'|trans }}
-				</option>
-			{% endif %} #}
-			{% for catalogEvent in catalogEvents %}
-				{# {% if catalogEvent.id != constant('App\\Service\\Catalog\\CatalogTemplateLoader::DEFAULT_EVENT') %} #}
-					{# <option value="?event={{ catalogEvent.id }}" data-event-id="{{ catalogEvent.id }}" class="uppercase text-center" {% if selectedEvent is defined and selectedEvent is not null and catalogEvent.id == selectedEvent.id %} selected="selected" {% endif %}>
-                        {{ catalogEvent.getKeyTranslation()|trans }}
-					</option> #}
-<option value="?event={{ catalogEvent.id }}" class="uppercase text-center" 
-{% if selectedEvent is defined and selectedEvent is not null and catalogEvent.id == selectedEvent %}
-
-
-	selected="selected"
-{% endif %}
-
->
-
-
-	{{ catalogEvent.getKeyTranslation()|trans }}
-</option>
-
-				{# {% endif %} #}
-			{% endfor %}
-		</select>
-	</div>
-{% endif %}
+    {% if catalogEvents is defined and catalogEvents is not empty %}
+        <div class="search-bloc">
+            <select class="search-bloc--select js-country-search-events js-gtm-occasion-selector uppercase">
+                {% for catalogEvent in catalogEvents %}
+                    <option value="?event={{ catalogEvent.id }}" class="uppercase text-center"
+                        {% if selectedEvent is defined and selectedEvent is not null and catalogEvent.id == selectedEvent %} selected="selected" {% endif %}>
+                            {{ catalogEvent.getKeyTranslation()|trans }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    {% endif %}
 
     <div class="search-bloc">
         <input class="uppercase search-bloc--button js-country-search-button" type="button" value="{{ 'search.bloc.button.text'|trans }}"/>
     </div>
-
 
 </section>

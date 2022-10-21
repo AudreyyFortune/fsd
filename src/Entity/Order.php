@@ -124,7 +124,7 @@ class Order
         return $this->delivery_date;
     }
 
-    public function setDeliveryDate(\DateTimeInterface $delivery_date): self
+    public function setDeliveryDate(?\DateTimeInterface $delivery_date): self
     {
         $this->delivery_date = $delivery_date;
 

@@ -6,55 +6,45 @@
     <meta name="robots" content="noindex,follow"/>
 {% endblock %}
 
-
-
 {% block body %}
+    <h1 class="h1">{{ 'product.h1.text'|trans({'%country%': country|capitalize}) }}</h1>
 
-<h1 class="h1">{{ 'product.h1.text'|trans({'%country%': country|capitalize}) }}</h1>
-
-
-<section class="product-detail">
-
-    <div class="product-detail-info-left">
-        <div class="product-detail-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt=""/></div>
-    </div>
-
-    <div class="product-detail-info-right">
-        <div class="product-header">
-            <div class="product-title">{{ product.name }}</div>
-            <div class="product-reference">{{ 'product.reference.text'|trans({'%ref%': product.reference}) }}</div>
+    <section class="product-detail">
+        <div class="product-detail-info-left">
+            <div class="product-detail-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt=""/></div>
         </div>
-        <div class="product-description">{{ product.description|raw }}</div>
-
-        <div class="product-price">
-                {{ 'product.size.length.text.html'|trans({'%choicesLength%': choices|length}) }} :
-            <ul class="product-price-list">
-                {% for key, choice in choices %}
-                    <li class="product-price-label"><span class="product-price-size">{{ key|trans }}</span> - {{ choice }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <div class="product-delivery-information">
-            <div class="delivery-information-title">{{ 'product.delivery.information.title.text'|trans }}</div>
-            <div class="delivery-information-content">
-                {% include 'product/information-delivery.html.twig' with { 
-                        'product': product,
-                    } only 
-                %}
+        <div class="product-detail-info-right">
+            <div class="product-header">
+                <div class="product-title">{{ product.name }}</div>
+                <div class="product-reference">{{ 'product.reference.text'|trans({'%ref%': product.reference}) }}</div>
+            </div>
+            <div class="product-description">{{ product.description|raw }}</div>
+            <div class="product-price">
+                    {{ 'product.size.length.text.html'|trans({'%choicesLength%': choices|length}) }} :
+                <ul class="product-price-list">
+                    {% for key, choice in choices %}
+                        <li class="product-price-label"><span class="product-price-size">{{ key|trans }}</span> - {{ choice }} €</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="product-delivery-information">
+                <div class="delivery-information-title">{{ 'product.delivery.information.title.text'|trans }}</div>
+                <div class="delivery-information-content">
+                    {% if product.isFuneral %}
+                        {{ 'product.funeral.delivery.information.content.text.html'|trans|raw }}
+                    {% else %}
+                        {{ 'product.normal.delivery.information.content.text.html'|trans|raw }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="product-form">
+                {{ form_start(form) }}
+                {{ form_label(form.name, 'product.form.size.label'|trans) }}
+                {{ form_widget(form.name, {'attr': {'class': 'form-select'} }) }}
+                <button type="submit" class="form-button"><a href="{{ path('order', { _locale: lang }) }}">{{ 'product.form.summit.button'|trans }}</a></button>
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
             </div>
         </div>
-
-        <div class="product-form">
-            {{ form_start(form) }}
-            {{ form_label(form.name, 'product.form.size.label'|trans) }}
-            {{ form_widget(form.name, {'attr': {'class': 'form-select'} }) }}
-            <button type="submit" class="form-button"><a href="{{ path('order', { _locale: lang }) }}">{{ 'product.form.summit.button'|trans }}</a></button>
-            {{ form_rest(form) }}
-            {{ form_end(form) }}
-        </div>
-    </div>
-
-</section>
-
+    </section>
 {% endblock %}

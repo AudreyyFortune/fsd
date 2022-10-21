@@ -1,17 +1,17 @@
 {% import 'common/show-alert.html.twig' as showErrors %}
 
 <div class="form">
-
     <h2 class="h2"><span class="number-form-step">2</span> {{ 'order.form.step.2.text'|trans }} </h2>
-
+    <p>{{ 'order.recipient.field.required.text'|trans }}</p>
 
     {% if not formRecipient.vars.valid %}
         {{ showErrors.errorAlert( [formRecipient.title, formRecipient.name, formRecipient.firstname, formRecipient.adress, formRecipient.zipcode, formRecipient.city, formRecipient.country, formRecipient.additional_adress, formRecipient.phone, formRecipient.details]) }}
     {% endif %}
 
+    {% if product.isFuneral %} <h3>{{ 'order.recipient.form.funeral.decreased.text'|trans }}</h3>{% endif %}
 
     <div class="form-row">
-        {{ form_widget(formRecipient.title) }}
+        {{ form_widget(formRecipient.title, {'attr': {'class': 'form-input form-select'}}) }}
     </div>
     <div class="form-row">
         {{ form_widget(formRecipient.name, {'attr': {'class': 'form-input', 'placeholder': 'order.form.name.placeholder'|trans }} ) }}
@@ -36,8 +36,7 @@
         {{ form_widget(formRecipient.city, {'attr': {'class': 'form-input', 'placeholder': 'order.form.city.placeholder'|trans }} ) }}
     </div>
     <div class="form-row">
-        {{ form_widget(formRecipient.country, {'value' : country }) }}
-{#        'order.form.country.placeholder'|trans#}
+        {{ form_widget(formRecipient.country, {'value' : country|capitalize }) }}
     </div>
     <div class="form-row">
         {{ form_widget(formRecipient.additional_adress, {'attr': {'class': 'form-textarea', 'placeholder': 'order.form.additional_adress.placeholder'|trans }} ) }}
@@ -48,7 +47,5 @@
     <div class="form-row">
         {{ form_widget(formRecipient.details, {'attr': {'class': 'form-input', 'placeholder': 'order.form.details.placeholder'|trans }} ) }}
     </div>
-
-
 
 </div>

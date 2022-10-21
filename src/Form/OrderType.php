@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class OrderType extends AbstractType
 {
@@ -22,9 +23,15 @@ class OrderType extends AbstractType
             ->add('recipient', RecipientType::class, [
 				'isFuneral' => $options['isFuneral'],
 			])
-            ->add('sender', SenderType::class, [])
+			->add('sender', SenderType::class, [])
 			->add('delivery_date', DateType::class, [
 				'widget' => 'single_text',
+			    'required' => true,
+			    'constraints' => [
+					new NotBlank([
+						'message' => 'order.form.date.required',
+					]),
+				],
 			]);
 			if($options['isFuneral']) {
 				$builder->add('delivery_hour', TimeType::class, [
@@ -32,7 +39,12 @@ class OrderType extends AbstractType
 					'placeholder' => [
 						'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
 					],
-					'required' => false,
+					'required' => true,
+					'constraints' => [
+						new NotBlank([
+							'message' => 'order.form.hour.required',
+						]),
+					],
 				]);
 			}
     }

@@ -1,49 +1,45 @@
-.container-list-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    .container-product {
-        width: 33%;
-        margin: 1rem 0;
-
-        @media (max-width: bp($md)) {
-            width: 49%;
-        }
-
-        .product-img {
-            display: block;
-            margin: auto;
-            width: 85%;
-        }
-
-        .product-detail {
-            text-align: center;
-
-            .product-title {
-                color: color($powder-ash);
+.country {
+    .container-list-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .container-product {
+            width: 33%;
+            margin: 1rem 0;
+                @media (max-width: bp($md)) {
+                    width: 49%;
+                }
+            .product-img {
+                display: block;
+                margin: auto;
+                width: 85%;
             }
-        }
-    }
-}
-
-.container-list-countries {
-    width: 60%;
-    margin: 5rem auto;
-    text-align: center;
-        .list-countries {
-            display: flex;
-            flex-wrap: wrap;
-            
-            justify-content: center;
-            
-            li {
-                margin: 1rem;
-
-                a:hover {
-                    color: color($primary-color);
-                    text-decoration: underline;
+            .product-detail {
+                text-align: center;
+                .product-title {
+                    color: color($powder-ash);
                 }
             }
         }
+    }
+    .container-list-countries {
+        width: 60%;
+        margin: 5rem auto;
+        text-align: center;
+            @media (max-width: bp($md)) {
+                width: 95%;
+            }
+            .list-countries {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    margin: 1rem;
+                    a:hover {
+                        color: color($primary-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
+    }
 }

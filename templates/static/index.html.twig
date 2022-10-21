@@ -1,6 +1,4 @@
 {% extends 'base.html.twig' %}
-{% set bodyClass = "static" %}
-
 
 {% block seo %}    
     {% include 'common/meta-header.html.twig' with { 
@@ -9,19 +7,9 @@
         'metaDescription' : 'meta-description.text' } only %}
 {% endblock %}
 
-
-{% block body %}  
-{# <section class="">        
-{% include 'common/component/breadcrumbs-static.twig' with 
-    {'url' : path('about_us'),'title' : ('footer.about-us.link.who-are-we.title.text')|trans        
-    } only %}    
-</section>     #}
-
+{% block body %}
     <div class="static">        
         <h1 class="h1">{{ (key ~'.h1.text')|trans }}</h1>  
         <div class="content">{{ (key ~'.body.text.html')|trans|raw }}</div>
     </div>
-
-
-
 {% endblock %}
