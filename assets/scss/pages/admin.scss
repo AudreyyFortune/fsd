@@ -1,0 +1,57 @@
+.admin {
+
+    font-size: 1.7rem;
+    .h1 {
+        text-align: center;
+        font-size: 2em;
+        font-family: $nunitoSansB;
+        text-decoration: underline;
+        color: color($indianred);
+    }
+
+    &-link-dashbord {
+        li {
+            list-style-type: unset;
+            a:hover {
+                color: color($indianred);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .fa-square-plus {
+        color: color($green);
+    }
+    .fa-pen-to-square {
+        color: color($fedora);
+    }
+    .fa-trash {
+        color: color($radical-red);
+    }
+
+    table {
+        border: 1px solid;
+        margin: auto;
+        width: 800px;
+
+        thead {
+            background-color: color($bizarre);
+            border-bottom: 1px solid;
+            height: 35px;
+            text-align: center;
+        }
+        tbody {
+            text-align: center;
+        }
+
+        tr {
+            td {
+                border-bottom: 1px solid;
+                a {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+<div class="topbar">
+    <div class="container">
+        <p class="pull-left"> {{ 'admin.header.top-bar.title.text'|trans }} </p>
+        <ul class="pull-right">
+            <ul class="topbar-lang">{% include 'common/lang-available.html.twig'%}</ul>
+        </ul>
+    </div>
+</div>
+
+<div class="header">
+    <div class="header-content">
+        <a href="{{ path('international') }}" class="header-home-link">
+            <strong class="header-logo">
+                <span class="logo-uppercase">universal flower</span>
+                <span class="logo-subtitle">{{ 'header.logo.subtitle.text'|trans }}</span>
+            </strong>
+        </a>
+        {% include 'common/connection.html.twig' only %}
+    </div>
+</div>

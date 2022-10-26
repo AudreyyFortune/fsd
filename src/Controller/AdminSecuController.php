@@ -14,12 +14,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminSecuController extends AbstractController
 {
-    #[Route('/register', name: 'app_register')]
+    #[Route('/register', name: 'register')]
     public function register(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $passwordHasher): Response
     {
-		// the request language
-        $lang = $request->getLocale();
-
 		// we create the register form and submit it
         $user = new User();
         $form = $this->createForm(RegisterType::class, $user);
@@ -40,13 +37,12 @@ class AdminSecuController extends AbstractController
 
 		// rendering
         return $this->render('security/register.html.twig', [
-            'controller_name' => 'AdminSecuController',
-            'lang' => $lang,
+            'lang' => $request->getLocale(),
             'form' => $form->createView(),
         ]);
     }
 
-	#[Route('/login', name: 'app_login')]
+	#[Route('/login', name: 'login')]
 	public function login(Request $request, AuthenticationUtils $authenticationUtils)
 	{
 		// the request language
@@ -59,14 +55,13 @@ class AdminSecuController extends AbstractController
 
 		// rendering
 		return $this->render('security/login.html.twig', [
-			'controller_name' => 'AdminSecuController',
 			'lang' => $lang,
 			'last_username' => $lastUsername,
 			'error' => $error,
 		]);
 	}
 
-	#[Route('/logout', name: 'app_logout')]
+	#[Route('/logout', name: 'logout')]
 	public function logout(Request $request) { }
 
 }

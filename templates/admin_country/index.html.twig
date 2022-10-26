@@ -1,0 +1,36 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block seo %}<title>{{ 'admin.country.meta-title.text'|trans }}</title>{% endblock %}
+
+
+{% block body %}
+    <h1 class="h1">{{ 'admin.country.h1.text'|trans }}</h1>
+    <div class="admin-link-dashbord">
+        <ol><li><a href="{{ url('admin_country_add') }}">Ajouter un pays <i class="fa-solid fa-square-plus"></i></a></li></ol>
+    </div>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>code ISO</th>
+            <th>sapa</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for country in countries %}
+            <tr>
+                <td>{{ country.id }}</td>
+                <td>{{ country.isocode }}</td>
+                <td>{{ country.sapa }}</td>
+                <td>
+                    <a href="{{ url('admin_country_edit', { id:country.id } ) }}">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                    -
+                    <a href="{{ url('admin_country_remove', { id:country.id } ) }}">Supprimer<i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

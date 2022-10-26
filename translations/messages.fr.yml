@@ -11,6 +11,7 @@ header.lang.available.fr.text: Français
 header.connection.login.text: Connexion
 header.connection.logout.text: Déconnexion
 header.connection.register.text: Créer un compte
+header.connection.admin.text: Espace administrateur
 
 # footer
 footer.column-1.title.text: A propos de nous
@@ -209,3 +210,19 @@ civility.form.mr.label: Mr
 civility.form.mr-mrs.label: Mr & Mme
 civility.form.family.label: Famille
 
+# admin
+admin.header.top-bar.title.text: Bienvenue sur l'espace administrateur
+admin.meta-title.text: Admin - Tableau de bord
+admin.h1.text: Tableau de bord
+admin.body.text: Bienvenue dans l'espace administrateur. Ici vous pouvez gérer la gestion des pays présent sur le site (création, insertion, modification, et suppression). Pour le moment. Viendra la gestion des produits des catalogues ??..
+admin.country.meta-title.text: Admin - Gestion des pays
+admin.country.h1.text: Gestion des pays
+admin.country.form.meta-title.text: Admin - Action
+admin.country.form.edit.h1.text: Modification d'un pays
+admin.country.form.add.h1.text: Ajout d'un pays
+admin.country.result.add.text: Le code pays a bien été ajouté !
+admin.country.result.edit.text: Le code pays a bien été modifié !
+admin.country.result.remove.text: Le code pays a bien été supprimé !
+admin.country.form.isocode.placeholder: isocode
+admin.country.form.sapa.placeholder: sapa
+admin.country.form.summit.button: enregistrer

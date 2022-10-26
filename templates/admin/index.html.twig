@@ -1,0 +1,14 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block seo %}<title>{{ 'admin.meta-title.text'|trans }}</title>{% endblock %}
+
+
+{% block body %}
+    <h1 class="h1">{{ 'admin.h1.text'|trans }}</h1>
+    <p>{{ 'admin.body.text'|trans }}</p>
+    <div class="admin-link-dashbord">
+        <ol>
+            <li><a href="{{ path('admin_country') }}">{{ 'admin.country.h1.text'|trans }}</a></li>
+        </ol>
+    </div>
+{% endblock %}

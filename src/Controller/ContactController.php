@@ -10,16 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ContactController extends AbstractController
 {
-    #[Route('/contact', name: 'app_contact')]
-    public function index(Request $request, TranslatorInterface $translator, EntityManagerInterface $em, MailService $mailer): Response
+    #[Route('/contact', name: 'contact')]
+    public function index(Request $request, EntityManagerInterface $em, MailService $mailer): Response
     {
-		// the request language
-		$lang = $request->getLocale();
-
 		// variables
 		$isSend = false;
 
@@ -45,8 +41,7 @@ class ContactController extends AbstractController
 
 		// rendering
         return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
-            'lang' => $lang,
+            'lang' => $request->getLocale(),
             'form' => $form->createView(),
             'isSend' => $isSend,
         ]);

@@ -2,7 +2,7 @@
 
 namespace App\Form\user;
 
-use App\Entity\User\Sender;
+use App\Entity\user\Sender;
 use App\Entity\user\Title;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

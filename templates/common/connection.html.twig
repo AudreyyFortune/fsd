@@ -7,7 +7,7 @@
     {% endif %}
 
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('email') }}" class="connection-link-admin">email</a>
+        <a href="{{ path('admin') }}" class="connection-link-admin">{{ 'header.connection.admin.text'|trans }}</a>
 {#        (chemin doit commencer par "admin")#}
     {% endif %}
 

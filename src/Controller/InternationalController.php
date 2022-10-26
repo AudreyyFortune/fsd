@@ -8,7 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 class InternationalController extends AbstractController
 {
@@ -24,8 +23,8 @@ class InternationalController extends AbstractController
         $this->catalogEventRepository = $catalogEventRepository;
     }
 
-    #[Route('/', name: 'app_international')]
-    public function index(Request $request, TranslatorInterface $translator): Response
+    #[Route('/', name: 'international')]
+    public function index(Request $request): Response
     {
 		// the request language
         $lang = $request->getLocale();
@@ -37,7 +36,6 @@ class InternationalController extends AbstractController
 
 		// rendering
         return $this->render('international/index.html.twig', [
-            'controller_name' => 'InternationalController',
             'lang' => $lang,
             'bodyClass' => 'international',
             'searchBloc' => [

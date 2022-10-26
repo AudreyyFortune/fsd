@@ -1,0 +1,30 @@
+{% extends 'base-admin.html.twig' %}
+{% import 'common/show-alert.html.twig' as showErrors %}
+
+{% block seo %}<title>{{ 'admin.country.form.meta-title.text'|trans }}</title>{% endblock %}
+
+{% block body %}
+
+    {% if country.id %}
+       <h1 class="h1">{{ 'admin.country.form.edit.h1.text'|trans }}</h1>
+    {% else %}
+        <h1 class="h1">{{ 'admin.country.form.add.h1.text'|trans }}</h1>
+    {% endif %}
+
+    {{ form_start(form, {'attr': {'class':'form-without-label'}}) }}
+
+        {% if not form.vars.valid %}
+            {{ showErrors.errorAlert( [form.isocode]) }}
+        {% endif %}
+
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+            {{ form_widget(form.isocode, {'attr': {'class': 'form-input', "placeholder": "admin.country.form.isocode.placeholder"|trans }} ) }}
+        </div>
+        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+            {{ form_widget(form.sapa, {'attr': {'class': 'form-input', "placeholder": "admin.country.form.sapa.placeholder"|trans }} ) }}
+        </div>
+        <button type="submit" class="form-button">{{ 'admin.country.form.summit.button'|trans }}</button>
+
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}

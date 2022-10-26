@@ -69,6 +69,13 @@
     color: color($fedora);
     text-align: center;
 }
+.form-success {
+    background-color: color($feijoa);
+    color: color($fedora);
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
 .form-without-label {
     width: 65%;
     margin: 3em auto auto;

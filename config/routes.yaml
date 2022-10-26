@@ -22,12 +22,6 @@ contact:
         en: /contact-us
         fr: /contactez-nous
 
-email:
-    controller: App\Controller\MailerController::sendEmail
-    path:
-        en: /admin/email
-        fr: /admin/email
-
 register:
     controller: App\Controller\AdminSecuController::register
     path:
@@ -57,3 +51,33 @@ order:
   path:
     en: /order
     fr: /commande
+
+admin:
+  controller: App\Controller\AdminController::index
+  path:
+    en: /admin/dashbord
+    fr: /admin/tableau
+
+admin_country:
+  controller: App\Controller\AdminCountryController::index
+  path:
+    en: /admin/country
+    fr: /admin/pays
+
+admin_country_edit:
+  controller: App\Controller\AdminCountryController::register
+  path:
+    en: /admin/country/{id}
+    fr: /admin/pays/{id}
+
+admin_country_add:
+  controller: App\Controller\AdminCountryController::register
+  path:
+    en: /admin/country/add
+    fr: /admin/pays/ajout
+
+admin_country_remove:
+  controller: App\Controller\AdminCountryController::remove
+  path:
+    en: /admin/country/remove/{id}
+    fr: /admin/pays/remove/{id}

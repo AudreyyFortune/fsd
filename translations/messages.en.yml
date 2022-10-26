@@ -12,7 +12,7 @@ header.lang.available.fr.text: Français
 header.connection.login.text: Login
 header.connection.logout.text: Logout
 header.connection.register.text: Register
-
+header.connection.admin.text: Administrator area
 
 # footer
 footer.column-1.title.text: About us
@@ -212,3 +212,21 @@ civility.form.mrs.label: Mrs
 civility.form.mr.label: Mr
 civility.form.mr-mrs.label: Mr & Mrs
 civility.form.family.label: Family
+
+
+# admin
+admin.header.top-bar.title.text: Welcome to the administrator area
+admin.meta-title.text: Admin - Dashbord
+admin.h1.text: Dashbord
+admin.body.text: Welcome to the administrator area. Here you can manage the countries present on the site (creation, insertion, modification, and deletion). For the moment. Will come the management of the products of the catalogues ??... maybe
+admin.country.meta-title.text: Admin - Country management
+admin.country.h1.text: Country management
+admin.country.form.meta-title.text: Admin - Action
+admin.country.form.edit.h1.text: Changing a country
+admin.country.form.add.h1.text: Adding a country
+admin.country.result.add.text: The country code has been added!
+admin.country.result.edit.text: The country code has been changed!
+admin.country.result.remove.text: The country code has been removed!
+admin.country.form.isocode.placeholder: isocode
+admin.country.form.sapa.placeholder: sapa
+admin.country.form.summit.button: save

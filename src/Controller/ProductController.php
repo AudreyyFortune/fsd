@@ -26,7 +26,7 @@ class ProductController extends AbstractController
 		$this->productSizePriceRepository = $productSizePriceRepository;
 	}
 
-    #[Route('/product/{slug}', name: 'app_product')]
+    #[Route('/product/{slug}', name: 'product')]
     public function index(string $slug, Request $request, SessionInterface $session): Response
     {
 		// the request language
@@ -73,7 +73,6 @@ class ProductController extends AbstractController
 
 		// rendering
         return $this->render('product/index.html.twig', [
-            'controller_name' => 'ProductController',
             'bodyClass' => 'product',
             'lang' => $lang,
             'product' => $productTranslation,

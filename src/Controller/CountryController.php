@@ -28,7 +28,7 @@ class CountryController extends AbstractController
         $this->catalogEventRepository = $catalogEventRepository;
     }
 
-    #[Route('/{slug}', name: 'app_country')]
+    #[Route('/{slug}', name: 'country')]
     public function index(string $slug, Request $request, SessionInterface $session): Response
     {
 		// the request language
@@ -73,7 +73,6 @@ class CountryController extends AbstractController
 
 		// rendering
         return $this->render('country/index.html.twig', [
-            'controller_name' => 'CountryController',
 			'bodyClass' => 'country',
             'lang' => $lang,
             'country' => $country,

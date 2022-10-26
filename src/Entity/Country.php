@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use App\Repository\CountryRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
+#[UniqueEntity('isocode', 'This isocode alrealdy exist')]
 #[ORM\Entity(repositoryClass: CountryRepository::class)]
 class Country
 {
@@ -13,7 +15,7 @@ class Country
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 2)]
+    #[ORM\Column(type: 'string', length: 2, unique: true)]
     private $isocode;
 
     #[ORM\Column(type: 'string', length: 100)]

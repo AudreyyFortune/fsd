@@ -15,12 +15,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class OrderController extends AbstractController
 {
-    #[Route('/order', name: 'app_order')]
+    #[Route('/order', name: 'order')]
     public function index(Request $request, EntityManagerInterface $em, SessionInterface $session): Response
     {
-		// the request language
-		$lang = $request->getLocale();
-
 		// the selected country and product are retrieved in session
 		$country = $session->get('country');
 		$product = $session->get('product');
@@ -57,9 +54,8 @@ class OrderController extends AbstractController
 
 		// rendering
         return $this->render('order/index.html.twig', [
-            'controller_name' => 'OrderController',
 			'bodyClass' => 'order',
-			'lang' => $lang,
+			'lang' => $request->getLocale(),
 			'form' => $form->createView(),
 			'country' => $country,
 			'product' => $product,
