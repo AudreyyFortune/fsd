@@ -149,6 +149,19 @@ order.form.phone.placeholder: Phone number with country code *
 order.form.details.placeholder: Futher information to enabled delivery
 order.form.funeral_ceremony.placeholder: Place of delivery for the ceremony (undertaker, funeral home, place of worship, cemetery, ...)
 
+# payment page
+payment.meta-title.text: Summary | Universal Flower
+payment.meta-description.text: Payment - livraison-fleurs.aquarelle - Universal Flower
+payment.meta-keywords.text: payment
+payment.meta-robots.text: noindex,nofollow
+payment.h1.text: Summary of your order
+payment.summary.product.text: Product
+payment.summary.date.text: For delivery on
+payment.summary.hour.text: at
+payment.summary.recipient.text: Recipient
+payment.summary.recipient.funeral.ceremony.text: Place of the ceremony
+payment.summary.recipient.more.info.text: Additional information
+payment.summary.sender.text: Sender
 
 # about us page
 about-us.meta-title.text: About us

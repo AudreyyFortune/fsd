@@ -2,17 +2,31 @@
 
 namespace App\Controller;
 
+use App\Repository\OrderRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PaymentController extends AbstractController
 {
     #[Route('/payment', name: 'payment')]
-    public function index(): Response
+    public function index(Request $request, SessionInterface $session, OrderRepository $orderRepository): Response
     {
+		// we get the id of the command we have just placed in session
+		$idOrder = $session->get('idOrder');
+
+		// order
+		$order = $orderRepository->findby(['id' => $idOrder])[0];
+		// order details
+		$orderDetails = $orderRepository->getOrderDetails($idOrder, $order->getIdProduct())[0];
+
+		// rendering
         return $this->render('payment/index.html.twig', [
-            'controller_name' => 'PaymentController',
+			'bodyClass' => 'payment',
+			'lang' => $request->getLocale(),
+			'order' => $orderDetails
         ]);
     }
 }

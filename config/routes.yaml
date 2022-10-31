@@ -52,6 +52,12 @@ order:
     en: /order
     fr: /commande
 
+payment:
+  controller: App\Controller\PaymentController::index
+  path:
+    en: /payment
+    fr: /paiement
+
 admin:
   controller: App\Controller\AdminController::index
   path:

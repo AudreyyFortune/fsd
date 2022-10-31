@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Order;
+use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query\Expr\Join;
 
 /**
  * @extends ServiceEntityRepository<Order>
@@ -21,46 +23,26 @@ class OrderRepository extends ServiceEntityRepository
         parent::__construct($registry, Order::class);
     }
 
-    public function add(Order $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->persist($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-    public function remove(Order $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-//    /**
-//     * @return Order[] Returns an array of Order objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('o')
-//            ->andWhere('o.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('o.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
-
-//    public function findOneBySomeField($value): ?Order
-//    {
-//        return $this->createQueryBuilder('o')
-//            ->andWhere('o.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+	public function getOrderDetails($orderId, $productId)
+	{
+		return $this->createQueryBuilder('o')
+					->select('o.total, o.delivery_hour, o.delivery_date, r.title as recCivility,
+						r.name as recName, r.firstname as recFirstname, r.adress as recAdress, r.city as recCity, 
+						r.country as recCountry, r.zipcode as recZipcode, r.additional_adress as recAddAdress, 
+						r.phone as recPhone, r.details as recDetail, r.funeral_ceremony as recFunCeremony, 
+						s.title as senCivility, s.name as senName, s.firstname as senFirstname, s.email as senEmail, 
+						s.adress as senAdress, s.zipcode as senZipcode, s.city as senCity, s.country as senCountry,
+						s.company as senCompany, s.phone as senPhone, p.src_img
+					')
+					->join('o.recipient', 'r')
+					->join('o.sender', 's')
+					->leftJoin(Product::class, 'p', JOIN::WITH, 'o.id_product = p.id')
+					->where('o.id = :orderId')
+					->andWhere('p.id = :productId')
+					->setParameter('orderId', $orderId)
+					->setParameter('productId', $productId)
+					->getQuery()
+					->getArrayResult()
+					;
+	}
 }

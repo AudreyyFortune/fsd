@@ -45,11 +45,18 @@ class OrderController extends AbstractController
 			$order->setTotal($totalPrice);
 
 			// VOIR CE QU ON FAIT APRES
-			dump($order);
+			//dump($order);
+
+
 			// insertion into database
 			$em->persist($order);
 			$em->flush();
 
+			$session->set('idOrder', $order->getId());
+
+
+			// redirect to the payment page
+			return $this->redirectToRoute('payment');
 		}
 
 		// rendering

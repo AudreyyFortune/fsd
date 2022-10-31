@@ -1,0 +1,42 @@
+.payment {
+    .payment-summary {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 5rem;
+        div {
+            width: 30%;
+        }
+        .summary-order-product {
+            img {
+                width: 60%;
+            }
+        }
+    }
+    @media (max-width: bp($lg)) {
+        .payment-summary {
+            flex-wrap: wrap;
+            div {
+                width: 48%;
+                padding: 1rem;
+            }
+            div:first-of-type {
+                width: 99%;
+            }
+            .summary-order-product {
+                img {
+                    width: 40%;
+                }
+            }
+        }
+    }
+    @media (max-width: bp($md)) {
+        .payment-summary {
+            text-align: left;
+            margin: 2rem;
+            .summary-order-product {
+                text-align: center;
+            }
+        }
+    }
+}

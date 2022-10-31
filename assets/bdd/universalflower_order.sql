@@ -1,0 +1,62 @@
+-- MySQL dump 10.13  Distrib 8.0.28, for macos11 (x86_64)
+--
+-- Host: 127.0.0.1    Database: universalflower
+-- ------------------------------------------------------
+-- Server version	8.0.28
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `order`
+--
+
+DROP TABLE IF EXISTS `order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_product` int NOT NULL,
+  `product_price` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `order_date` datetime NOT NULL,
+  `total` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `recipient_id` int NOT NULL,
+  `sender_id` int NOT NULL,
+  `delivery_date` date NOT NULL,
+  `delivery_hour` time DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_F5299398E92F8F78` (`recipient_id`),
+  KEY `IDX_F5299398F624B39D` (`sender_id`),
+  CONSTRAINT `FK_F5299398E92F8F78` FOREIGN KEY (`recipient_id`) REFERENCES `recipient` (`id`),
+  CONSTRAINT `FK_F5299398F624B39D` FOREIGN KEY (`sender_id`) REFERENCES `sender` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order`
+--
+
+LOCK TABLES `order` WRITE;
+/*!40000 ALTER TABLE `order` DISABLE KEYS */;
+INSERT INTO `order` VALUES (1,1,'67.00','2022-10-19 13:57:56','82',2,2,'2022-10-28',NULL),(2,1,'67.00','2022-10-19 14:56:30','82',3,4,'2022-10-29',NULL),(3,29,'67.00','2022-10-19 14:57:35','82',4,5,'2022-10-26',NULL),(4,10,'46.00','2022-10-21 10:25:03','61',5,6,'2022-10-28','11:03:00'),(5,28,'130.00','2022-10-26 11:49:47','145',6,7,'2022-10-29','14:05:00'),(6,28,'130.00','2022-10-26 11:58:40','145',7,8,'2022-10-29','14:05:00'),(7,28,'130.00','2022-10-26 11:59:55','145',8,9,'2022-10-29','14:05:00'),(8,28,'130.00','2022-10-26 12:01:08','145',9,10,'2022-10-29','14:05:00'),(9,41,'54.00','2022-10-26 14:49:59','69',10,11,'2022-11-06',NULL);
+/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-10-31 10:03:13

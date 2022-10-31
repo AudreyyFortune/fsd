@@ -147,6 +147,19 @@ order.form.phone.placeholder: Numéro de téléphone avec l'indicatif du pays *
 order.form.details.placeholder: Informations complémentaires pour permettre la livraison
 order.form.funeral_ceremony.placeholder: Lieu de livraison pour la cérémonie (pompes funèbres, funérarium, lieu de culte, cimetière, ...)
 
+# page de paiement
+payment.meta-title.text: Récapitulatif | Universal Flower
+payment.meta-description.text: Paiement - livraison-fleurs.aquarelle - Universal Flower
+payment.meta-keywords.text: paiement
+payment.meta-robots.text: noindex,nofollow
+payment.h1.text: Récapitulatif de votre commande
+payment.summary.product.text: Produit
+payment.summary.date.text: Pour une livraison le
+payment.summary.hour.text: à
+payment.summary.recipient.text: Destinataire
+payment.summary.recipient.funeral.ceremony.text: Lieu de la cérémonie
+payment.summary.recipient.more.info.text: Information supplémentaire
+payment.summary.sender.text: Expéditeur
 
 # page à propos de nous
 a-propos-de-nous.meta-title.text: Qui sommes-nous ?

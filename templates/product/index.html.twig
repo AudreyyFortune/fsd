@@ -41,7 +41,7 @@
                 {{ form_start(form) }}
                 {{ form_label(form.name, 'product.form.size.label'|trans) }}
                 {{ form_widget(form.name, {'attr': {'class': 'form-select'} }) }}
-                <button type="submit" class="form-button"><a href="{{ path('order', { _locale: lang }) }}">{{ 'product.form.summit.button'|trans }}</a></button>
+                <button type="submit" class="form-button">{{ 'product.form.summit.button'|trans }}</button>
                 {{ form_rest(form) }}
                 {{ form_end(form) }}
             </div>

@@ -21,46 +21,4 @@ class CatalogEventRepository extends ServiceEntityRepository
         parent::__construct($registry, CatalogEvent::class);
     }
 
-    // public function add(CatalogEvent $entity, bool $flush = false): void
-    // {
-    //     $this->getEntityManager()->persist($entity);
-
-    //     if ($flush) {
-    //         $this->getEntityManager()->flush();
-    //     }
-    // }
-
-    // public function remove(CatalogEvent $entity, bool $flush = false): void
-    // {
-    //     $this->getEntityManager()->remove($entity);
-
-    //     if ($flush) {
-    //         $this->getEntityManager()->flush();
-    //     }
-    // }
-
-//    /**
-//     * @return CatalogEvent[] Returns an array of CatalogEvent objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('c.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
-
-//    public function findOneBySomeField($value): ?CatalogEvent
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
 }

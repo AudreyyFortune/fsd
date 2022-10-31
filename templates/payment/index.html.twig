@@ -1,20 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PaymentController!{% endblock %}
+{% block seo %}
+    {% include 'common/meta-header.html.twig' with {
+        'key' : 'payment',
+        'title' :  'title.text' ,
+        'metaDescription' : 'meta-description.text' } only %}
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1 class="h1">{{ 'payment.h1.text'|trans }}</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/projet-uf/src/Controller/PaymentController.php'|file_link(0) }}">src/Controller/PaymentController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/projet-uf/templates/payment/index.html.twig'|file_link(0) }}">templates/payment/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="payment-summary">
+
+        <div class="summary-order-product">
+            <h2 class="h2">{{ 'payment.summary.product.text'|trans }}</h2>
+            <img src="{{ asset('build/images/product/'~ order.src_img ~'.jpg') }}" alt=""/>
+            <ul>
+                <li>{{ order.total }} €</li>
+                <li class="summary-order-date">
+                    {{ 'payment.summary.date.text'|trans }}
+                    {% if lang == 'fr' %}{{ order.delivery_date|date("d/m/Y") }}{% else %}{{ order.delivery_date|date("m/d/Y") }}{% endif %}
+                    {% if order.delivery_hour %} {{ 'payment.summary.hour.text'|trans }} {{ order.delivery_hour|date('H:i') }} {% endif %}.
+                </li>
+            </ul>
+        </div>
+
+        <div class="summary-order-recipient">
+            <h2 class="h2">{{ 'payment.summary.recipient.text'|trans }}</h2>
+
+            <ul>
+                <li>{% if order.recCivility == 1 %} {{ 'civility.form.mrs.label'|trans }} {% elseif order.recCivility == 2 %} {{ 'civility.form.mr.label'|trans }} {% elseif order.recCivility == 3 %} {{ 'civility.form.mr-mrs.label'|trans}} {% elseif order.recCivility == 4 %} {{ 'civility.form.family.label'|trans }} {% endif %}
+                {{ order.recName }} {{ order.recFirstname }}</li>
+                {% if order.recFunCeremony %}<li> {{ 'payment.summary.recipient.funeral.ceremony.text'|trans }} : {{ order.recFunCeremony }}</li>{% endif %}
+                <ul>
+                    <li>{{ order.recAdress }}</li>
+                    {% if order.recAddAdress %} <li>{{ order.recAddAdress }} </li>{% endif %}
+                    <li>{{ order.recZipcode }} {{ order.recCity }}</li>
+                    <li>{{ order.recCountry }}</li>
+                    <li>{{ order.recPhone }}</li>
+                    {% if order.recDetail %} <li> {{ 'payment.summary.recipient.more.info.text'|trans }} : {{ order.recDetail }} </li>{% endif %}</ul>
+            </ul>
+        </div>
+
+        <div class="summary-order-sender">
+            <h2 class="h2">{{ 'payment.summary.sender.text'|trans }}</h2>
+            <ul>
+                <li> {% if order.senCivility == 1 %} {{ 'civility.form.mrs.label'|trans }} {% elseif order.senCivility == 2 %} {{ 'civility.form.mr.label'|trans }} {% elseif order.senCivility == 3 %} {{ 'civility.form.mr-mrs.label'|trans}} {% elseif order.senCivility == 4 %} {{ 'civility.form.family.label'|trans }} {% endif %}
+                    {{ order.senName }} {{ order.senFirstname }} </li>
+                <li>{{ order.senEmail }}</li>
+                <li> {{ order.senPhone }}</li>
+                <li>{{ order.senAdress }}</li>
+                {% if order.senCompany %}<li> {{ order.senCompany }}</li> {% endif %}
+                <li>{{ order.senZipcode }} {{ order.senCity }}</li>
+                <li> {{ order.senCountry }} </li>
+            </ul>
+        </div>
+
+    </div>
 {% endblock %}

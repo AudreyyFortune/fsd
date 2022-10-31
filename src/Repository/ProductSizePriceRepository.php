@@ -21,23 +21,4 @@ class ProductSizePriceRepository extends ServiceEntityRepository
         parent::__construct($registry, ProductSizePrice::class);
     }
 
-
-    /*public function add(ProductSizePrice $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->persist($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-    public function remove(ProductSizePrice $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }*/
-
 }
