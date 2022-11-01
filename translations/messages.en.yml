@@ -198,7 +198,7 @@ contact.form.question.information.text: If your request concerns an order, pleas
 contact.form.subject.label: Subject of your request *
 contact.form.subject.required: Please describe the subject of your request
 contact.form.summit.button: Validate
-contact.demand.send.text: <p>Thank you for your inquiry. <br/> Our team will get back to you as soon as possible.</p>
+contact.demand.send.text.html: <p>Thank you for your inquiry. <br/> Our team will get back to you as soon as possible.</p>
 
 # registration page
 register.h1.text: Do you want to create an account? It's over here!
@@ -211,6 +211,7 @@ registration.form.password.length.error: The password must be at least 5 charact
 registration.form.password.match.error: The password fields must match
 registration.form.email.label: Email
 registration.form.email.placeholder: Email
+registration.form.email.label.exist: This email is already used !
 registration.form.username.required: Username required
 registration.form.summit.button: Create my account
 
@@ -234,6 +235,7 @@ admin.h1.text: Dashbord
 admin.body.text: Welcome to the administrator area. Here you can manage the countries present on the site (creation, insertion, modification, and deletion). For the moment. Will come the management of the products of the catalogues ??... maybe
 admin.country.meta-title.text: Admin - Country management
 admin.country.h1.text: Country management
+admin.country.add.country.text: Add a country
 admin.country.form.meta-title.text: Admin - Action
 admin.country.form.edit.h1.text: Changing a country
 admin.country.form.add.h1.text: Adding a country
@@ -243,3 +245,6 @@ admin.country.result.remove.text: The country code has been removed!
 admin.country.form.isocode.placeholder: isocode
 admin.country.form.sapa.placeholder: sapa
 admin.country.form.summit.button: save
+admin.country.form.isocode.required: Isocode required
+admin.country.form.isocode.exist: This isocode already exist ! It must be unique
+admin.country.form.sapa.required: Sapa required

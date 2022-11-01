@@ -33,8 +33,6 @@ class RegisterType extends AbstractType
 				'required' => true,
 				'first_options'  => [
 					'label' => ' ',
-					/*'label' => 'registration.form.password.label',
-					'label_attr' => ['class' => 'margin-right-sm form-label form-label-password'],*/
 					'attr' => [
 						'placeholder' => 'registration.form.password.placeholder',
 						'class' => 'form-input'
@@ -42,8 +40,6 @@ class RegisterType extends AbstractType
 				],
 				'second_options' => [
 					'label' => ' ',
-					/*'label' => 'registration.form.repeat.password.label',
-					'label_attr' => ['class' => 'margin-right-sm form-label form-label-password'],*/
 					'attr' => [
 						'placeholder' => 'registration.form.repeat.password.placeholder',
 						'class' => 'form-input'
@@ -64,8 +60,8 @@ class RegisterType extends AbstractType
             'data_class' => User::class,
 			'constraints' => [
 				new UniqueEntity([
-					'fields' => 'username',
-					'message' => 'registration.form.password.label',
+					'fields' => 'email',
+					'message' => 'registration.form.email.label.exist',
 				]),
 			]
         ]);

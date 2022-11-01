@@ -30,7 +30,6 @@ class ContactController extends AbstractController
             $demand->setSendStatus(Contact::SEND);
             $demand->setDateSend($now);
             // sending an email
-			//// REVOIR POUR NE PAS RETURN VOID
             $mailer->sendEmail($demand->getEmail(), $demand->getSubject(), $demand->getQuestion());
             // insertion into database
             $em->persist($demand);

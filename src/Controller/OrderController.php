@@ -44,16 +44,11 @@ class OrderController extends AbstractController
 			$order->setProductPrice($priceSize);
 			$order->setTotal($totalPrice);
 
-			// VOIR CE QU ON FAIT APRES
-			//dump($order);
-
-
 			// insertion into database
 			$em->persist($order);
 			$em->flush();
 
 			$session->set('idOrder', $order->getId());
-
 
 			// redirect to the payment page
 			return $this->redirectToRoute('payment');
@@ -67,7 +62,8 @@ class OrderController extends AbstractController
 			'country' => $country,
 			'product' => $product,
 			'productPrice' => $priceSize,
-			'totalPrice' => $totalPrice
+			'totalPrice' => $totalPrice,
+			'deliveryCosts' => $deliveryCosts
         ]);
     }
 }

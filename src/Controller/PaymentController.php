@@ -17,16 +17,17 @@ class PaymentController extends AbstractController
 		// we get the id of the command we have just placed in session
 		$idOrder = $session->get('idOrder');
 
-		// order
-		$order = $orderRepository->findby(['id' => $idOrder])[0];
-		// order details
-		$orderDetails = $orderRepository->getOrderDetails($idOrder, $order->getIdProduct())[0];
+		// if the order exist
+		if ($idOrder) {
+			// rendering
+			return $this->render('payment/index.html.twig', [
+				'bodyClass' => 'payment',
+				'lang' => $request->getLocale(),
+				'order' => $orderRepository->getOrderDetails($idOrder),
+			]);
+		}
 
-		// rendering
-        return $this->render('payment/index.html.twig', [
-			'bodyClass' => 'payment',
-			'lang' => $request->getLocale(),
-			'order' => $orderDetails
-        ]);
+		// if the order doesn't exist -> redirection to the homepage
+		return $this->redirectToRoute('international');
     }
 }

@@ -58,16 +58,14 @@ class ProductController extends AbstractController
 		}
 
 		// we create the form and submit it
-		$productSizeTest = new ProductSizePrice();
-		$form = $this->createForm(ProductSizeType::class, $productSizeTest, [
+		$form = $this->createForm(ProductSizeType::class, new ProductSizePrice(), [
 			'productSize' => $productSize['list_size'],
 		]);
 		$form->handleRequest($request);
 
 		if ($form->isSubmitted() && $form->isValid()) {
 			// put the selected price in the session
-			$priceSize = $form['name']->getData();
-			$session->set('priceSize', $priceSize);
+			$session->set('priceSize', $form['name']->getData());
 			return $this->redirectToRoute('order');
 		}
 

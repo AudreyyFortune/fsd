@@ -14,7 +14,6 @@ class AdminController extends AbstractController
     {
 		// rendering
         return $this->render('admin/index.html.twig', [
-			'bodyClass' => 'admin',
 			'lang' => $request->getLocale(),
         ]);
     }

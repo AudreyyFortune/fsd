@@ -8,7 +8,7 @@
     {{ form_start(form, {'attr': {'class':'form-without-label'}}) }}
 
     {% if not form.vars.valid %}
-        {{ showErrors.errorAlert( [form.username, form.email]) }}
+        {{ showErrors.errorAlert( [form.username, form.email, form.password.first, form.password.second]) }}
     {% endif %}
 
         <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">

@@ -49,7 +49,9 @@ class CountryController extends AbstractController
 		// return the id country by the slug save in session
 		$countrySlug = $this->countryTranslationRepository->getCountryIdBySlug($lang, $slug);
 
-		if ($countrySlug) {
+		// if the country exist
+		if ($countrySlug && $countrySlug !== []) {
+			// if the country doesn't exist
 			$countryId = $countrySlug[0]['id'];
 			// the country id and the event are put in session
 			$session->set('idCountry', $countryId);
@@ -58,6 +60,7 @@ class CountryController extends AbstractController
 
 		//retrieve the country id stored in session (useful when changing languages)
 		$countryId = $session->get('idCountry');
+
 		//we find the country of the page according to its id (useful when changing languages)
 		$country = $this->countryTranslationRepository->getNameFileCountryByIdAndLang($countryId, $lang)[0]['name_file'];
 		//retrieve the event id stored in session (useful when changing languages)
@@ -67,7 +70,7 @@ class CountryController extends AbstractController
         $catalogEvents = $this->catalogEventRepository->findBy(['enabled' => true]);
 
 		// if you don't have a current event
-		if (!$currentEvent) {
+		if (!$currentEvent && $event) {
 			return $this->redirect($country.'?event='.$event);
 		}
 

@@ -17,23 +17,6 @@ class ProductType extends AbstractType
             ->add('src_img')
             ->add('id_price_category')
         ;
-
-    //$builder
-        // ->add('delivery_date', TextType::class, [         
-        //     'attr' => [
-        //         'data-min-date' => $minDate,
-        //         'data-max-date' => $maxDate,
-        //         'data-disabled-dates' => implode(';', $disableDates),
-        //         ],
-        //     ])            
-        // ->add('product_size', ChoiceType::class, [
-        //         'choices' => $options['data']['listSizeProduct'],
-        //         'required' => true,
-        //         ])           
-        // ->add('product_size_radio', ChoiceType::class, [
-        //         'choices' => $options['data']['listSizeProduct'],
-        //         'expanded' => true,
-        //     ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

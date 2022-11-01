@@ -23,7 +23,7 @@ class OrderRepository extends ServiceEntityRepository
         parent::__construct($registry, Order::class);
     }
 
-	public function getOrderDetails($orderId, $productId)
+	public function getOrderDetails($orderId)
 	{
 		return $this->createQueryBuilder('o')
 					->select('o.total, o.delivery_hour, o.delivery_date, r.title as recCivility,
@@ -38,11 +38,9 @@ class OrderRepository extends ServiceEntityRepository
 					->join('o.sender', 's')
 					->leftJoin(Product::class, 'p', JOIN::WITH, 'o.id_product = p.id')
 					->where('o.id = :orderId')
-					->andWhere('p.id = :productId')
 					->setParameter('orderId', $orderId)
-					->setParameter('productId', $productId)
 					->getQuery()
-					->getArrayResult()
+					->getArrayResult()[0]
 					;
 	}
 }

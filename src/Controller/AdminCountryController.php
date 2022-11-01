@@ -19,7 +19,6 @@ class AdminCountryController extends AbstractController
     {
 		// rendering
 		return $this->render('admin_country/index.html.twig', [
-			'bodyClass' => 'admin',
             'countries' => $repository->findAll(),
 			'lang' => $request->getLocale(),
         ]);
@@ -54,7 +53,6 @@ class AdminCountryController extends AbstractController
 		return $this->render('admin_country/form.html.twig', [
 			'lang' => $request->getLocale(),
 			'form' => $form->createView(),
-			'bodyClass' => 'admin',
 			'country' => $country,
 		]);
 	}

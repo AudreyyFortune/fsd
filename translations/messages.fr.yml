@@ -75,7 +75,7 @@ international.img.alt.text: Livraison de fleurs dans le monde entier
 # page pays
 country.meta-description.text: Faites livrer des fleurs à l'international grâce à Universal Flower et son réseau de fleuristes de proximité - %country
 country.h1.text: Livraison par nos fleuristes - %country%
-country.catalog.one.price.text: À partir de %price%
+country.catalog.one.price.text: À partir de %price% €
 country.catalog.more.price.text: Prix unique %price% €
 country.h2.text: Nous livrons aussi
 
@@ -195,7 +195,7 @@ contact.form.question.information.text: Si votre demande concerne une commande, 
 contact.form.subject.label: Objet de votre demande *
 contact.form.subject.required: Merci de préciser l'objet de votre demande
 contact.form.summit.button: Valider
-contact.demand.send.text: <p>Merci pour votre demande. <br/> Notre équipe reviendra vers vous au plus vite.</p>
+contact.demand.send.text.html: <p>Merci pour votre demande. <br/> Notre équipe reviendra vers vous au plus vite.</p>
 
 # page inscription
 register.h1.text: Vous voulez créer un compte ? C'est par ici !
@@ -208,6 +208,7 @@ registration.form.password.length.error: Le mot de passe doit avoir au moins 5 c
 registration.form.password.match.error: Les champs du mot de passe doivent correspondre
 registration.form.email.label: Email
 registration.form.email.placeholder: Email
+registration.form.email.label.exist: Cette email est déjà utilisée !
 registration.form.username.required: Nom utilisateur obligatoire
 registration.form.summit.button: Créer mon compte
 
@@ -230,6 +231,7 @@ admin.h1.text: Tableau de bord
 admin.body.text: Bienvenue dans l'espace administrateur. Ici vous pouvez gérer la gestion des pays présent sur le site (création, insertion, modification, et suppression). Pour le moment. Viendra la gestion des produits des catalogues ??..
 admin.country.meta-title.text: Admin - Gestion des pays
 admin.country.h1.text: Gestion des pays
+admin.country.add.country.text: Ajouter un pays
 admin.country.form.meta-title.text: Admin - Action
 admin.country.form.edit.h1.text: Modification d'un pays
 admin.country.form.add.h1.text: Ajout d'un pays
@@ -239,3 +241,6 @@ admin.country.result.remove.text: Le code pays a bien été supprimé !
 admin.country.form.isocode.placeholder: isocode
 admin.country.form.sapa.placeholder: sapa
 admin.country.form.summit.button: enregistrer
+admin.country.form.isocode.required: Isocode obligatoire
+admin.country.form.isocode.exist: Cet isocode existe déjà ! Il doit être unique
+admin.country.form.sapa.required: Sapa obligatoire
