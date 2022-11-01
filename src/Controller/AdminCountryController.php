@@ -15,12 +15,11 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AdminCountryController extends AbstractController
 {
     #[Route('/admin/country', name: 'admin_country')]
-    public function index(CountryRepository $repository, Request $request): Response
+    public function index(CountryRepository $repository): Response
     {
 		// rendering
 		return $this->render('admin_country/index.html.twig', [
             'countries' => $repository->findAll(),
-			'lang' => $request->getLocale(),
         ]);
     }
 
@@ -51,7 +50,6 @@ class AdminCountryController extends AbstractController
 
 		// rendering
 		return $this->render('admin_country/form.html.twig', [
-			'lang' => $request->getLocale(),
 			'form' => $form->createView(),
 			'country' => $country,
 		]);

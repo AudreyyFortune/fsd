@@ -2,7 +2,7 @@
     <div class="container">        
         <p class="pull-left"> {{ 'header.top-bar.title.text'|trans }} </p>            
         <ul class="pull-right">                
-            <li class="topbar-contact"> <a href="{{ path('contact', { _locale: lang }) }}" title="{{ 'header.contact_us.link.text'|trans }}">{{ 'header.contact_us.link.text'|trans }}</a></li>
+            <li class="topbar-contact"> <a href="{{ path('contact') }}" title="{{ 'header.contact_us.link.text'|trans }}">{{ 'header.contact_us.link.text'|trans }}</a></li>
             <ul class="topbar-lang">{% include 'common/lang-available.html.twig'%}</ul>
         </ul>    
     </div>

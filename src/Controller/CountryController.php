@@ -77,7 +77,6 @@ class CountryController extends AbstractController
 		// rendering
         return $this->render('country/index.html.twig', [
 			'bodyClass' => 'country',
-            'lang' => $lang,
             'country' => $country,
             'event' => $event,
             'catalogProducts' => $catalogProducts,

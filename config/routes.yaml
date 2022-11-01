@@ -10,6 +10,12 @@ country:
         en: /country/{slug}
         fr: /pays/{slug}
 
+static_about:
+  controller: App\Controller\StaticController::about
+  path:
+    en: /info/about-us
+    fr: /page/a-propos-de-nous
+
 static:
     controller: App\Controller\StaticController::index
     path:

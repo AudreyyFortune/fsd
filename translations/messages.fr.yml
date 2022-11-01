@@ -36,7 +36,6 @@ catalog.event.mothers.text: Fête des mères
 search.bloc.button.text: Chercher
 search-bloc.country.required: Merci de choisir un pays de livraison
 
-
 # reinsurance
 reinsurance.img.flower.alt.text: Livraison de fleurs à l'international pour toutes les occasions
 reinsurance.svg.flower.alt.text: fleurs fraîches
@@ -58,7 +57,6 @@ reinsurance.svg.pay.alt.text: paiement sécurisé
 reinsurance.title.pay.text: Un paiement sécurisé et fiable
 reinsurance.subtitle.pay.text: Carte Bancaire
 reinsurance.text.pay.text: Universaflower a confié son système de paiement à des prestataires spécialisés dans la sécurisation des paiements en ligne. Nous ne connaissons et ne conservons jamais les informations qui concernent votre carte bancaire.
-
 
 # page international
 international.meta-title.text: Livraison de fleurs à l'international en 24 à 48h
@@ -160,6 +158,8 @@ payment.summary.recipient.text: Destinataire
 payment.summary.recipient.funeral.ceremony.text: Lieu de la cérémonie
 payment.summary.recipient.more.info.text: Information supplémentaire
 payment.summary.sender.text: Expéditeur
+payment.thanks.order.text: Merci pour votre commande !
+payment.go-to-home.button.text: Retour à l'accueil
 
 # page à propos de nous
 a-propos-de-nous.meta-title.text: Qui sommes-nous ?

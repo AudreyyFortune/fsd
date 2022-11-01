@@ -72,7 +72,6 @@ class ProductController extends AbstractController
 		// rendering
         return $this->render('product/index.html.twig', [
             'bodyClass' => 'product',
-            'lang' => $lang,
             'product' => $productTranslation,
 			'productSize' => $productSize,
             'country' => $country,

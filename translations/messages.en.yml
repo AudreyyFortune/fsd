@@ -162,6 +162,8 @@ payment.summary.recipient.text: Recipient
 payment.summary.recipient.funeral.ceremony.text: Place of the ceremony
 payment.summary.recipient.more.info.text: Additional information
 payment.summary.sender.text: Sender
+payment.thanks.order.text: Thanks for your order !
+payment.go-to-home.button.text: Go to home
 
 # about us page
 about-us.meta-title.text: About us
@@ -226,7 +228,6 @@ civility.form.mrs.label: Mrs
 civility.form.mr.label: Mr
 civility.form.mr-mrs.label: Mr & Mrs
 civility.form.family.label: Family
-
 
 # admin
 admin.header.top-bar.title.text: Welcome to the administrator area

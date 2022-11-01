@@ -40,7 +40,6 @@ class ContactController extends AbstractController
 
 		// rendering
         return $this->render('contact/index.html.twig', [
-            'lang' => $request->getLocale(),
             'form' => $form->createView(),
             'isSend' => $isSend,
         ]);

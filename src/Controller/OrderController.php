@@ -57,7 +57,6 @@ class OrderController extends AbstractController
 		// rendering
         return $this->render('order/index.html.twig', [
 			'bodyClass' => 'order',
-			'lang' => $request->getLocale(),
 			'form' => $form->createView(),
 			'country' => $country,
 			'product' => $product,

@@ -36,7 +36,6 @@ class InternationalController extends AbstractController
 
 		// rendering
         return $this->render('international/index.html.twig', [
-            'lang' => $lang,
             'bodyClass' => 'international',
             'searchBloc' => [
                 'countries' => $countries,

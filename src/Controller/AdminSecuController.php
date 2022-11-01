@@ -37,17 +37,13 @@ class AdminSecuController extends AbstractController
 
 		// rendering
         return $this->render('security/register.html.twig', [
-            'lang' => $request->getLocale(),
             'form' => $form->createView(),
         ]);
     }
 
 	#[Route('/login', name: 'login')]
-	public function login(Request $request, AuthenticationUtils $authenticationUtils)
+	public function login(AuthenticationUtils $authenticationUtils)
 	{
-		// the request language
-		$lang = $request->getLocale();
-
 	  	// get the login error if there is one
 		$error = $authenticationUtils->getLastAuthenticationError();
 		// last username entered by the user
@@ -55,7 +51,6 @@ class AdminSecuController extends AbstractController
 
 		// rendering
 		return $this->render('security/login.html.twig', [
-			'lang' => $lang,
 			'last_username' => $lastUsername,
 			'error' => $error,
 		]);

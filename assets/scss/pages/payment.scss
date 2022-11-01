@@ -1,5 +1,5 @@
 .payment {
-    .payment-summary {
+    &-summary {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -11,6 +11,16 @@
             img {
                 width: 60%;
             }
+        }
+    }
+    &-ok {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: fw($bold);
+        color: color($boulder);
+        a {
+            text-decoration: underline;
+            font-size: 2rem;
         }
     }
     @media (max-width: bp($lg)) {

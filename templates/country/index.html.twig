@@ -21,7 +21,7 @@
     <section class="container-list-products">
         {% for catalogProduct in catalogProducts %}
             <article class="container-product">
-                <a href="{{ path('product', { _locale: lang, slug: [((catalogProduct.name)|replace({' ':'-'})), catalogProduct.reference]|join('-') }) }}" title="{{ catalogProduct.name }}">
+                <a href="{{ path('product', { slug: [((catalogProduct.name)|replace({' ':'-'})), catalogProduct.reference]|join('-') }) }}" title="{{ catalogProduct.name }}">
                 <img src="{{ asset('build/images/product/'~ catalogProduct.src_img ~'.jpg') }}" alt="{{ catalogProduct.name|capitalize }}" class="product-img" loading="lazy"/>
                     <div class="product-detail">
                         <p class="product-title">{{ catalogProduct.name|upper }}</p>

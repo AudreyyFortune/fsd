@@ -22,7 +22,6 @@ class PaymentController extends AbstractController
 			// rendering
 			return $this->render('payment/index.html.twig', [
 				'bodyClass' => 'payment',
-				'lang' => $request->getLocale(),
 				'order' => $orderRepository->getOrderDetails($idOrder),
 			]);
 		}

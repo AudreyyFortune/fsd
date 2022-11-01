@@ -4,11 +4,11 @@
         content : [ 
             {
                 title: ('footer.about-us.link.text')|trans,
-                link: path('static', {slug: 'footer.about-us.route.name'|trans})
+                link: path('static_about')
             },
             {
                 title: ('footer.cookies.link.text')|trans,
-                link: path('static', {slug: 'footer.cookies.route.name'|trans})
+                link: path('static', { slug: 'footer.cookies.route.name'|trans })
             },
         ]
     },
@@ -17,19 +17,17 @@
         content : [ 
             {
                 title: ('footer.about-us.link.text')|trans,
-                link: path('static', {slug: 'footer.about-us.route.name'|trans})
+                link: path('static_about')
             },
             {
                 title: ('footer.cookies.link.text')|trans,
-                link: path('static', {slug: 'footer.cookies.route.name'|trans})
+                link: path('static', { slug: 'footer.cookies.route.name'|trans })
             },
         ]
     },
 
-    
 ] %}
 
-        
 <footer class="footer">
     <div class="footer-content container">
         {% for block in footerBlock %}
