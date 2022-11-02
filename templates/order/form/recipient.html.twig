@@ -8,7 +8,7 @@
         {{ showErrors.errorAlert( [formRecipient.title, formRecipient.name, formRecipient.firstname, formRecipient.adress, formRecipient.zipcode, formRecipient.city, formRecipient.country, formRecipient.additional_adress, formRecipient.phone, formRecipient.details]) }}
     {% endif %}
 
-    {% if product.isFuneral %} <h3>{{ 'order.recipient.form.funeral.decreased.text'|trans }}</h3>{% endif %}
+    {% if product.isFuneral %}<h3>{{ 'order.recipient.form.funeral.decreased.text'|trans }}</h3>{% endif %}
 
     <div class="form-row">
         {{ form_widget(formRecipient.title, {'attr': {'class': 'form-input form-select'}}) }}
@@ -47,5 +47,4 @@
     <div class="form-row">
         {{ form_widget(formRecipient.details, {'attr': {'class': 'form-input', 'placeholder': 'order.form.details.placeholder'|trans }} ) }}
     </div>
-
 </div>

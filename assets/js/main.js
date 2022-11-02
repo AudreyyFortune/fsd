@@ -7,10 +7,9 @@ const Site = function () {
     // Modules init    
     for (const key in modules) {                   
             try {                
-                this[key] = new modules[key];    
-                //console.log(key)
+                this[key] = new modules[key];
             } catch(err) {                
-                //console.log(key, err);
+                console.log(key, err);
             }       
         }
 };

@@ -14,18 +14,17 @@
     },
     { 
         title : ('footer.column-2.title.text'|trans),
-        content : [ 
-            {
-                title: ('footer.about-us.link.text')|trans,
-                link: path('static_about')
-            },
+        content : [
             {
                 title: ('footer.cookies.link.text')|trans,
                 link: path('static', { slug: 'footer.cookies.route.name'|trans })
             },
+            {
+                title: ('footer.about-us.link.text')|trans,
+                link: path('static_about')
+            },
         ]
     },
-
 ] %}
 
 <footer class="footer">

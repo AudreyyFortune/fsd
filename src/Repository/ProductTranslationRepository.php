@@ -33,8 +33,6 @@ class ProductTranslationRepository extends ServiceEntityRepository
                     ->setParameter('locale', $lang)    
                     ->getQuery()
                     ->getSingleResult()
-                    ;   
-            
+                    ;
     }
-
 }

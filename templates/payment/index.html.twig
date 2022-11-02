@@ -12,7 +12,6 @@
     <h1 class="h1">{{ 'payment.h1.text'|trans }}</h1>
 
     <div class="payment-summary">
-
         <div class="summary-order-product">
             <h2 class="h2">{{ 'payment.summary.product.text'|trans }}</h2>
             <img src="{{ asset('build/images/product/'~ order.src_img ~'.jpg') }}" alt=""/>
@@ -28,7 +27,6 @@
 
         <div class="summary-order-recipient">
             <h2 class="h2">{{ 'payment.summary.recipient.text'|trans }}</h2>
-
             <ul>
                 <li>{% if order.recCivility == 1 %} {{ 'civility.form.mrs.label'|trans }} {% elseif order.recCivility == 2 %} {{ 'civility.form.mr.label'|trans }} {% elseif order.recCivility == 3 %} {{ 'civility.form.mr-mrs.label'|trans}} {% elseif order.recCivility == 4 %} {{ 'civility.form.family.label'|trans }} {% endif %}
                 {{ order.recName }} {{ order.recFirstname }}</li>
@@ -56,7 +54,6 @@
                 <li> {{ order.senCountry }} </li>
             </ul>
         </div>
-
     </div>
 
     <div class="payment-ok">

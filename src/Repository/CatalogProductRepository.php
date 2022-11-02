@@ -31,7 +31,6 @@ class CatalogProductRepository extends ServiceEntityRepository
                     ->setParameter('event', $event)
                     ->getQuery()
                     ->getArrayResult()    
-                    ;   
-            
+                    ;
     }
 }

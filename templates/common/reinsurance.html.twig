@@ -1,21 +1,17 @@
 {% set icons = ['flower', 'truck-flower', 'world', 'pay'] %}
 
-
 <div class="section-reinsurance">
-{% for icon in icons %}
-
-    <div class="block-reinsurance">
-        <div class="reinsurance-img">
-            <img src="{{ asset('build/images/reinsurance/'~icon~'.jpeg') }}" alt="{{ ('reinsurance.img.'~icon~'.alt.text')|trans }}"/>
+    {% for icon in icons %}
+        <div class="block-reinsurance">
+            <div class="reinsurance-img">
+                <img src="{{ asset('build/images/reinsurance/'~icon~'.jpeg') }}" alt="{{ ('reinsurance.img.'~icon~'.alt.text')|trans }}"/>
+            </div>
+            <div class="reinsurance-header">
+                <img class="icon-svg" alt="{{ ('reinsurance.svg.'~icon~'.alt.text')|trans }}" src="{{ asset('build/images/icon/'~icon~'.svg') }}" width="42" height="42"/>
+                <h3 class="reinsurance-title h3">{{ ('reinsurance.title.'~icon~'.text')|trans }}</h3>
+            </div>
+            <span class="reinsurance-subtitle">{{ ('reinsurance.subtitle.'~icon~'.text')|trans }}</span>
+            <span class="reinsurance-text">{{ ('reinsurance.text.'~icon~'.text')|trans }}</span>
         </div>
-        <div class="reinsurance-header">
-            <img class="icon-svg" alt="{{ ('reinsurance.svg.'~icon~'.alt.text')|trans }}" src="{{ asset('build/images/icon/'~icon~'.svg') }}" width="42" height="42"/>
-            <h3 class="reinsurance-title h3">{{ ('reinsurance.title.'~icon~'.text')|trans }}</h3>
-        </div>
-        <span class="reinsurance-subtitle">{{ ('reinsurance.subtitle.'~icon~'.text')|trans }}</span>
-        <span class="reinsurance-text">{{ ('reinsurance.text.'~icon~'.text')|trans }}</span>
-    </div>
-
-{% endfor %}
-
+    {% endfor %}
 </div>

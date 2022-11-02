@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Order;
-use App\Entity\user\Recipient;
-use App\Entity\user\Sender;
 use App\Form\OrderType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -45,18 +43,17 @@ class OrderController extends AbstractController
 		$form->handleRequest($request);
 
 		if ($form->isSubmitted() && $form->isValid()) {
-
 			// updating of variables
 			$now = new \DateTime();
 			$order->setOrderDate($now);
 			$order->setIdProduct($product['id']);
 			$order->setProductPrice($priceSize);
 			$order->setTotal($totalPrice);
-
 			// insertion into database
 			$em->persist($order);
 			$em->flush();
 
+			// we put the idOrder in the session
 			$session->set('idOrder', $order->getId());
 
 			// redirect to the payment page

@@ -35,6 +35,7 @@ class ContactController extends AbstractController
             $em->persist($demand);
             $em->flush();
 
+			// updating of variable for the rendering
             $isSend = true;
         }
 
