@@ -45,21 +45,21 @@ class ProductController extends AbstractController
         $refProduct = end($productSlug);
 
 		// we get the properties and translation of the product concerned and we put in session
-        $productTranslation = $this->productTranslationRepository->getProductTranslation($lang, $refProduct)[0];
+        $productTranslation = $this->productTranslationRepository->getProductTranslation($lang, $refProduct);
 		$session->set('product', $productTranslation);
 
 		// the different product sizes and associated prices are collected for this product
-		$productSize = $this->productSizePriceRepository->findBy(['name' => $productTranslation['price_name']]);
-		$productSize['name'] = $productSize[0]->getName();
-		$productSize['list_size']['product.category_1.size.text.html'] = $productSize[0]->getCategory1();
-		if ($productSize['name'] !== 'single') {
-			$productSize['list_size']['product.category_2.size.text.html'] = $productSize[0]->getCategory2();
-			$productSize['list_size']['product.category_3.size.text.html'] = $productSize[0]->getCategory3();
+		$productSize = $this->productSizePriceRepository->findOneBy(['name' => $productTranslation['price_name']]);
+		$myProductSize['name'] = $productSize->getName();
+		$myProductSize['list_size']['product.category_1.size.text.html'] = $productSize->getCategory1();
+		if ($myProductSize['name'] !== 'single') {
+			$myProductSize['list_size']['product.category_2.size.text.html'] = $productSize->getCategory2();
+			$myProductSize['list_size']['product.category_3.size.text.html'] = $productSize->getCategory3();
 		}
 
 		// we create the form and submit it
 		$form = $this->createForm(ProductSizeType::class, new ProductSizePrice(), [
-			'productSize' => $productSize['list_size'],
+			'productSize' => $myProductSize['list_size'],
 		]);
 		$form->handleRequest($request);
 
@@ -75,7 +75,7 @@ class ProductController extends AbstractController
             'product' => $productTranslation,
 			'productSize' => $productSize,
             'country' => $country,
-			'choices' => $productSize['list_size'],
+			'choices' => $myProductSize['list_size'],
 			'form' => $form->createView(),
         ]);
     }

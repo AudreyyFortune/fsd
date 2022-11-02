@@ -45,7 +45,7 @@ class CountryTranslationRepository extends ServiceEntityRepository
 					->andWhere('ct.locale = :locale')
 					->setParameter('locale', $lang)
 					->getQuery()
-					->getResult()
+					->getOneOrNullResult()
 					;
 	}
 
@@ -59,7 +59,7 @@ class CountryTranslationRepository extends ServiceEntityRepository
 					->andWhere('ct.id_country = :idCountry')
 					->setParameter('idCountry', $idCountry)
 					->getQuery()
-					->getResult()
+					->getOneOrNullResult()
 					;
 	}
 

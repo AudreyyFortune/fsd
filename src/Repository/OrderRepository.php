@@ -40,7 +40,7 @@ class OrderRepository extends ServiceEntityRepository
 					->where('o.id = :orderId')
 					->setParameter('orderId', $orderId)
 					->getQuery()
-					->getArrayResult()[0]
+					->getOneOrNullResult()
 					;
 	}
 }

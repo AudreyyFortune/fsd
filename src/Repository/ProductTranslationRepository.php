@@ -32,7 +32,7 @@ class ProductTranslationRepository extends ServiceEntityRepository
                     ->setParameter('refProduct', $refProduct) 
                     ->setParameter('locale', $lang)    
                     ->getQuery()
-                    ->getArrayResult()    
+                    ->getSingleResult()
                     ;   
             
     }
