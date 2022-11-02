@@ -22,6 +22,15 @@ class OrderController extends AbstractController
 		$country = $session->get('country');
 		$product = $session->get('product');
 
+		// if you have not selected a country before -> redirection to the homepage
+		if (null === $country ) {
+			return $this->redirectToRoute('international');
+		}
+		// if you have not selected a product before -> redirection to the country page to choose a product
+		if (null === $product ) {
+			return $this->redirectToRoute('country', ['slug' => $country]);
+		}
+
 		// the price of the product selected in session is retrieved
 		$priceSize = $session->get('priceSize');
 		// the product is calculated with delivery costs

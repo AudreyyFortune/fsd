@@ -69,9 +69,23 @@ class CountryController extends AbstractController
 		// list of available events
 		$catalogEvents = $this->catalogEventRepository->findBy(['enabled' => true]);
 
+		// we check if the id of the url really exists
+		$eventVerify = $this->catalogEventRepository->findOneBy(['id' => $event, 'enabled' => true]);
+
+		// if you want to access to a id catalog that does not exist or not enabled (change in the url) -> redirection to event id = 1
+		if (!$eventVerify) {
+			return $this->redirect($country.'?event=1');
+		}
+
 		// if you don't have a current event
 		if (!$currentEvent && $event) {
 			return $this->redirect($country.'?event='.$event);
+		}
+
+		// if you want to access a country that does not exist (change in the url) -> redirection to homepage
+		$currentRoute = $request->attributes->get('slug');
+		if ($currentRoute !== $country) {
+			return $this->redirectToRoute('international');
 		}
 
 		// rendering
