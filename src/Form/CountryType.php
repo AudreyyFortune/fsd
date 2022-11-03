@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 class CountryType extends AbstractType
@@ -17,6 +18,10 @@ class CountryType extends AbstractType
         $builder
             ->add('isocode', TextType::class, [
 				'constraints' => [
+					new Length([
+						'max' => 2,
+						'maxMessage' => 'admin.country.form.isocode.length',
+					]),
 					new NotBlank([
 						'message' => 'admin.country.form.isocode.required',
 					]),

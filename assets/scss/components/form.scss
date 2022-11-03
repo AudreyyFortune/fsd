@@ -20,6 +20,9 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+    ul {
+        display: none;
+    }
 }
 .form-row__container-flex {
 	display: flex;
@@ -34,9 +37,6 @@
 	&--align-center {
 		align-items: center;
 	}
-    ul {
-        display: none;
-    }
 }
 .form-input, .form-textarea {
 	vertical-align: middle;

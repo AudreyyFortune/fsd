@@ -17,15 +17,12 @@
     <div class="form-row">
         {{ form_widget(formSender.firstname, {'attr': {'class': 'form-input', 'placeholder': 'order.form.firstname.placeholder'|trans }} ) }}
     </div>
-
     <div class="form-row">
-        {{ form_widget(formSender.email, {'attr': {'class': 'form-input', 'placeholder': 'order.form.email.placeholder'|trans }} ) }}
+        {{ form_widget(formSender.email, {'attr': {'class': 'form-input', 'placeholder': 'order.form.email.placeholder'|trans, 'value' : app.user.email|default('') }} ) }}
     </div>
-
     <div class="form-row">
         {{ form_widget(formSender.company, {'attr': {'class': 'form-input', 'placeholder': 'order.form.company.placeholder'|trans }} ) }}
     </div>
-
     <div class="form-row">
         {{ form_widget(formSender.adress, {'attr': {'class': 'form-input', 'placeholder': 'order.form.adress.placeholder'|trans }} ) }}
     </div>

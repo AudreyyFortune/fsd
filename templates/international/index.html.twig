@@ -1,13 +1,9 @@
 {% extends 'base.html.twig' %}
-{% set bodyClass = "international" %}
 
 {% block seo %}    
     {% include 'common/meta-header.html.twig' with { 
-        'key' : 'international', 
-        'title' :  'title.text' ,
-        'metaDescription' : 'meta-description.text' } only %}
+        'key' : 'international' } only %}
 {% endblock %}
-
 
 {% block body %}
     <h1 class="h1">{{ 'international.h1.text'|trans }}</h1>

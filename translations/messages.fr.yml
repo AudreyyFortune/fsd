@@ -1,7 +1,3 @@
-welcome: BienvenueFr
-essai: <h2><span>TestFR</span><h2><p>fncbefncekcn</p>
-
-
 # header
 header.top-bar.title.text: Nous livrons des fleurs dans le monde entier 
 header.contact_us.link.text: Contactez-nous
@@ -198,6 +194,10 @@ contact.form.summit.button: Valider
 contact.demand.send.text.html: <p>Merci pour votre demande. <br/> Notre équipe reviendra vers vous au plus vite.</p>
 
 # page inscription
+register.meta-title.text: Créez votre compte
+register.meta-description.text: Création de compte - livraison-fleurs.aquarelle - Universal Flower
+register.meta-robots.text: noindex, nofollow
+register.meta-keywords.text: création compte
 register.h1.text: Vous voulez créer un compte ? C'est par ici !
 registration.form.username.label: Identifiant
 registration.form.password.label: Mot de passe
@@ -213,6 +213,10 @@ registration.form.username.required: Nom utilisateur obligatoire
 registration.form.summit.button: Créer mon compte
 
 # page connexion
+login.meta-title.text: Connexion
+login.meta-description.text: Espace de connexion - livraison-fleurs.aquarelle - Universal Flower
+login.meta-robots.text: noindex, nofollow
+login.meta-keywords.text: espace connexion
 login.h1.text: Espace de connexion
 login.form.email.label: Email
 login.form.password.label: Mot de passe
@@ -243,4 +247,5 @@ admin.country.form.sapa.placeholder: sapa
 admin.country.form.summit.button: enregistrer
 admin.country.form.isocode.required: Isocode obligatoire
 admin.country.form.isocode.exist: Cet isocode existe déjà ! Il doit être unique
+admin.country.form.isocode.length: La longueur maximale de l'isocode est de deux caractères
 admin.country.form.sapa.required: Sapa obligatoire

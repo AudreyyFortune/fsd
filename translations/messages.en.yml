@@ -1,8 +1,3 @@
-welcome: WelcomeEn
-essai: <h2><span>TestEN</span><h2><p>fncbefncekcn</p>
-route.name.about-us: about-usTT
-
-
 # header
 header.top-bar.title.text: We deliver flowers all over the world 
 header.contact_us.link.text: Contact us
@@ -37,7 +32,6 @@ catalog.event.mothers.text: Mother's day
 search.bloc.button.text: Search
 search-bloc.country.required: Please select a country for delivery
 
-
 # reinsurance
 reinsurance.img.flower.alt.text: International flower delivery for all occasions
 reinsurance.svg.flower.alt.text: fresh flowers
@@ -60,7 +54,6 @@ reinsurance.title.pay.text: Secure and reliable payment
 reinsurance.subtitle.pay.text: Bank card
 reinsurance.text.pay.text: Universalflower has entrusted its payment system to providers specialized in securing online payments. We never know and never keep information about your bank card.
 
-
 # international page
 international.meta-title.text: International flower delivery within 24 to 48 hours
 international.meta-description.text: With Aquarelle, specialist in international flower delivery, send flowers around the world! Celebrate all the occasions, no matter where you are, thanks to Aquarelle’s international service!
@@ -72,7 +65,6 @@ international.introduction.text: Send flowers throughout the world in one simple
 international.seo.block.1.text.html: <h3>Send flowers throughout the world</h3><p>Specialising in international flower delivery since 1997, Universal Flower allows you to send flowers throughout the world thanks to its network of florist partners. Wherever you're based, send flower bouquets throughout the world to those you care about.</p> <p>With our international flower delivery service, we are uniquely equipped to meet all your needs in delivering flowers to your loved ones, wherever they are based, throughout the world and on every occasion.</p> <p>So, when you choose a country and international address for flower delivery, we immediately forward your order to the artisan florist based nearby to your recipient, who will shortly receive the bouquet delivered to their home address.</p> <p>Don't wait a moment longer to cheer up your loved ones by sending flowers, even when they're abroad!</p>
 international.seo.block.2.text.html: <h3>Flower delivery abroad</h3><p>Send flowers abroad in only a few hours, thanks to Universal Flower's international network. We employ all our know-how to offer you a huge range of fresh flower bouquets to send to your loved ones throughout the world - roses, orchids, peonies, jasmin, lisianthus...- to give whenever it suits you.</p> <p>Don't let another opportunity slip away to wish someone a happy birthday, send your congratulations for a marriage or birth... Now you can choose to send flowers abroad and throughout the world! Send flowers throughout the whole world! In all countries, flowers make a unique, ideal gift that you can offer on all sorts of occassions &#58; marriages, baptisms, condoleance, birthdays, end of year festivities, Valentine's day...</p> <p>Send a pretty flower bouquet abroad to elegantly convey your feelings, thanks to the timeless language of flowers. And the person receiving your display of affection will be even more moved by the fact that you make this gesture from afar.</p> <p>Discover a large range of bouquets, floral compositons and plants for international delivery. Simple, easy and quick! Thanks to Universal Flower and its florist partners, simply order the flower bouquets or compositions which you want to offer. Choose the country for delivery, and your flowers will be swiftly delivered throughout the world. Don't wait a moment longer to spread the joy - quick, discover our seasonal bouquets, and we'll take care of the international express flower delivery.</p>
 international.img.alt.text: Worldwide flower delivery
-
 
 # country page
 country.meta-description.text: International flower delivery with Universal Flower and its network of local florists - %country
@@ -173,7 +165,6 @@ about-us.meta-robots.text: index,follow
 about-us.h1.text: Who are we ?
 about-us.body.text.html: <p>Flower-delivery.aquarelle is a website of the Aquarelle Group created in 1987, the market leader for flower delivery in France.</p> <p>Our subsidiary 123fleurs is a partner of the Teleflor International network, <strong>enabling us to deliver your flower order within 24 to 48 hours globally, thanks to our network with more than 50,000 local florists spread over more than 135 countries.</strong></p>
 
-
 # cookies page
 cookies.meta-title.text: Policy relating to cookies | Universal Flower
 cookies.meta-description.text: Cookies - flower-delivery.aquarelle - Universal Flower
@@ -203,6 +194,10 @@ contact.form.summit.button: Validate
 contact.demand.send.text.html: <p>Thank you for your inquiry. <br/> Our team will get back to you as soon as possible.</p>
 
 # registration page
+register.meta-title.text: Create your account
+register.meta-description.text: Account creation - flower-delivery.aquarelle - Universal Flower
+register.meta-robots.text: noindex, nofollow
+register.meta-keywords.text: account creation
 register.h1.text: Do you want to create an account? It's over here!
 registration.form.username.label: User connexion
 registration.form.password.label: Password
@@ -218,6 +213,10 @@ registration.form.username.required: Username required
 registration.form.summit.button: Create my account
 
 # login page
+login.meta-title.text: Login
+login.meta-description.text: Account login - flower-delivery.aquarelle - Universal Flower
+login.meta-robots.text: noindex, nofollow
+login.meta-keywords.text: login connexion
 login.h1.text: Login area
 login.form.email.label: Email
 login.form.password.label: Password
@@ -248,4 +247,5 @@ admin.country.form.sapa.placeholder: sapa
 admin.country.form.summit.button: save
 admin.country.form.isocode.required: Isocode required
 admin.country.form.isocode.exist: This isocode already exist ! It must be unique
+admin.country.form.isocode.length: The maximum length of the isocode is two characters
 admin.country.form.sapa.required: Sapa required

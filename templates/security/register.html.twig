@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 {% import 'common/show-alert.html.twig' as showErrors %}
 
+{% block seo %}
+    {% include 'common/meta-header.html.twig' with {
+        'key' : 'register' } only %}
+{% endblock %}
+
 {% block body %}
     <h1 class="h1">{{ 'register.h1.text'|trans }}</h1>
 
@@ -14,7 +19,7 @@
         <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
             {{ form_widget(form.email, {'attr': {'class': 'form-input', "placeholder": "registration.form.email.label"|trans }} ) }}
         </div>
-        <div class="form-row form-row__container-flex form-row__container-flex--space-between form-row__container-no-flex-xs">
+        <div class="form-row">
             {{ form_row(form.password) }}
         </div>
         <button type="submit" class="form-button">{{ 'registration.form.summit.button'|trans }}</button>
