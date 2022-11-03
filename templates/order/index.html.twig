@@ -11,7 +11,7 @@
         <article class="order-summary">
             <h1 class="h1">{{ 'order.summary.title.text'|trans }}</h1>
             <div class="order-product-detail">
-                <div class="product-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt=""/></div>
+                <div class="product-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt="{{ product.name }}" title="{{ product.name }}"/></div>
                 <div class="product-name-price"><span class="product-name">{{ product.name }}</span> <span class="product-price">{{ productPrice }} €</span></div>
                 <div class="product-delivery"><span class="">{{ 'order.summary.delivery.text'|trans }}</span><span>{{ deliveryCosts}} €</span></div>
                 <div class="product-total"><span class="">{{ 'order.summary.total.text'|trans }}</span><span>{{ totalPrice }} €</span></div>

@@ -236,6 +236,8 @@ admin.body.text: Bienvenue dans l'espace administrateur. Ici vous pouvez gérer 
 admin.country.meta-title.text: Admin - Gestion des pays
 admin.country.h1.text: Gestion des pays
 admin.country.add.country.text: Ajouter un pays
+admin.country.action.edit.text: Modifier
+admin.country.action.delete.text: Supprimer
 admin.country.form.meta-title.text: Admin - Action
 admin.country.form.edit.h1.text: Modification d'un pays
 admin.country.form.add.h1.text: Ajout d'un pays

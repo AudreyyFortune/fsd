@@ -7,7 +7,7 @@
 
 {% block body %}
     <h1 class="h1">{{ 'international.h1.text'|trans }}</h1>
-    <img src="{{ asset('build/images/banniere_1522x300.png') }}" alt="{{ 'international.img.alt.text'|trans }}" loading="lazy">
+    <img src="{{ asset('build/images/banniere_1522x300.png') }}" alt="{{ 'international.img.alt.text'|trans }}" title="{{ 'international.img.alt.text'|trans }}" loading="lazy">
     <h2 class="h2">{{ 'international.h2.text'|trans }}</h2>
     {% include 'common/search-bloc.html.twig' with {
             'countries': searchBloc.countries,

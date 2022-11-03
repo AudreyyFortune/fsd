@@ -7,6 +7,6 @@
     {% endif %}
 
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('admin') }}" class="connection-link-admin">{{ 'header.connection.admin.text'|trans }}</a>
+        <a href="{{ path('admin') }}" title="{{ 'header.connection.admin.text'|trans }}" class="connection-link-admin">{{ 'header.connection.admin.text'|trans }}</a>
     {% endif %}
 </div>

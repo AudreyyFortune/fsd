@@ -11,7 +11,7 @@
 
     <section class="product-detail">
         <div class="product-detail-info-left">
-            <div class="product-detail-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt=""/></div>
+            <div class="product-detail-img"><img src="{{ asset('build/images/product/'~ product.src_img ~'.jpg') }}" alt="{{ product.name }}" title="{{ product.name }}"/></div>
         </div>
         <div class="product-detail-info-right">
             <div class="product-header">

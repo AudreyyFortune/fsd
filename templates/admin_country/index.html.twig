@@ -6,7 +6,7 @@
 {% block body %}
     <h1 class="h1">{{ 'admin.country.h1.text'|trans }}</h1>
     <div class="admin-link-dashbord">
-        <ol><li><a href="{{ url('admin_country_add') }}"> {{ 'admin.country.add.country.text'|trans }} <i class="fa-solid fa-square-plus"></i></a></li></ol>
+        <ol><li><a href="{{ url('admin_country_add') }}" title="{{ 'admin.country.add.country.text'|trans }}">{{ 'admin.country.add.country.text'|trans }}<i class="fa-solid fa-square-plus"></i></a></li></ol>
     </div>
 
     <table>
@@ -25,9 +25,9 @@
                 <td>{{ country.isocode }}</td>
                 <td>{{ country.sapa }}</td>
                 <td>
-                    <a href="{{ url('admin_country_edit', { id:country.id } ) }}">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="{{ url('admin_country_edit', { id:country.id } ) }}" title="{{ 'admin.country.action.edit.text'|trans }}">{{ 'admin.country.action.edit.text'|trans }}<i class="fa-solid fa-pen-to-square"></i></a>
                     -
-                    <a href="{{ url('admin_country_remove', { id:country.id } ) }}">Supprimer<i class="fa-solid fa-trash"></i></a>
+                    <a href="{{ url('admin_country_remove', { id:country.id } ) }}" title="{{ 'admin.country.action.delete.text'|trans }}">{{ 'admin.country.action.delete.text'|trans }}<i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         {% endfor %}

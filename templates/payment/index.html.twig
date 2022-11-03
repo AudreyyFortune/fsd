@@ -12,7 +12,7 @@
     <div class="payment-summary">
         <div class="summary-order-product">
             <h2 class="h2">{{ 'payment.summary.product.text'|trans }}</h2>
-            <img src="{{ asset('build/images/product/'~ order.src_img ~'.jpg') }}" alt=""/>
+            <img src="{{ asset('build/images/product/'~ order.src_img ~'.jpg') }}" alt="{{ order.src_img }}" title="{{ order.src_img }}"/>
             <ul>
                 <li>{{ order.total }} €</li>
                 <li class="summary-order-date">
@@ -35,7 +35,8 @@
                     <li>{{ order.recZipcode }} {{ order.recCity }}</li>
                     <li>{{ order.recCountry }}</li>
                     <li>{{ order.recPhone }}</li>
-                    {% if order.recDetail %} <li> {{ 'payment.summary.recipient.more.info.text'|trans }} : {{ order.recDetail }} </li>{% endif %}</ul>
+                    {% if order.recDetail %} <li> {{ 'payment.summary.recipient.more.info.text'|trans }} : {{ order.recDetail }} </li>{% endif %}
+                </ul>
             </ul>
         </div>
 
@@ -56,6 +57,6 @@
 
     <div class="payment-ok">
         <p> {{ 'payment.thanks.order.text'|trans }} </p>
-        <a href="{{ path('international') }}"> {{ 'payment.go-to-home.button.text'|trans }}</a>
+        <a href="{{ path('international') }}" title="{{ 'payment.go-to-home.button.text'|trans }}">{{ 'payment.go-to-home.button.text'|trans }}</a>
     </div>
 {% endblock %}

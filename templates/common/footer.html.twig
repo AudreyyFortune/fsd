@@ -33,7 +33,7 @@
             <div class="footer-content-column">
                 <span class="footer-title">{{ block.title }}</span>
                 {% for content in block.content %}
-                    <ul><li><a href="{{ content.link }}">{{ content.title }}</a></li></ul>
+                    <ul><li><a href="{{ content.link }}" title="{{ content.title }}">{{ content.title }}</a></li></ul>
                 {% endfor %}
             </div>
         {% endfor %}

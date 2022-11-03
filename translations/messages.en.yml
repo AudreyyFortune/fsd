@@ -235,6 +235,8 @@ admin.h1.text: Dashbord
 admin.body.text: Welcome to the administrator area. Here you can manage the countries present on the site (creation, insertion, modification, and deletion). For the moment. Will come the management of the products of the catalogues ??... maybe
 admin.country.meta-title.text: Admin - Country management
 admin.country.h1.text: Country management
+admin.country.action.edit.text: Edit
+admin.country.action.delete.text: Delete
 admin.country.add.country.text: Add a country
 admin.country.form.meta-title.text: Admin - Action
 admin.country.form.edit.h1.text: Changing a country

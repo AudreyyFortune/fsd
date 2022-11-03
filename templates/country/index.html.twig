@@ -22,7 +22,7 @@
         {% for catalogProduct in catalogProducts %}
             <article class="container-product">
                 <a href="{{ path('product', { slug: [((catalogProduct.name)|replace({' ':'-'})), catalogProduct.reference]|join('-') }) }}" title="{{ catalogProduct.name }}">
-                <img src="{{ asset('build/images/product/'~ catalogProduct.src_img ~'.jpg') }}" alt="{{ catalogProduct.name|capitalize }}" class="product-img" loading="lazy"/>
+                <img src="{{ asset('build/images/product/'~ catalogProduct.src_img ~'.jpg') }}" alt="{{ catalogProduct.name|capitalize }}" title="{{ catalogProduct.name|capitalize }}" class="product-img" loading="lazy"/>
                     <div class="product-detail">
                         <p class="product-title">{{ catalogProduct.name|upper }}</p>
                         <p class="product-price">{{ catalogProduct.category_2 ? 'country.catalog.one.price.text'|trans({'%price%': catalogProduct.category_1}) : 'country.catalog.more.price.text'|trans({'%price%': catalogProduct.category_1}) }}</p>
@@ -36,7 +36,7 @@
         <h2 class="h2">{{ 'country.h2.text'|trans }}</h2>
         <ul class="list-countries">
             {% for country in searchBloc.countries %}
-                <li><a href="{{ path('country', {slug: country.name_file}) }}?event={{ event }}">{{ country.name }}</a></li>
+                <li><a href="{{ path('country', {slug: country.name_file}) }}?event={{ event }}" title="{{ country.name }}">{{ country.name }}</a></li>
             {% endfor %}
         </ul>
     </section>
